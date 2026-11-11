@@ -17,7 +17,7 @@ python scripts/verify_sources.py
 python scripts/run_tests.py
 ```
 
-Run commands from the repository root. No private dataset, absolute local path, GitHub credential, or prior research directory is required for these commands. Matplotlib is optional for the legacy plotting helpers and is not required by the published examples.
+Run commands from the repository root. No private dataset, absolute local path, GitHub credential, or prior research directory is required for these commands. Matplotlib is required at import time by the preserved scheduler, even when no plots are generated, and is included in the dependencies.
 
 ## Quick start
 
