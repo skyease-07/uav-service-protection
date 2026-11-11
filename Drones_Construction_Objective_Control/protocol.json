@@ -1,0 +1,96 @@
+{
+  "version": "construction-objective-v1-2026-10-12",
+  "status": "Post-hoc robustness analysis on previously inspected scenarios; new local execution/analysis lock, not new holdout or external preregistration.",
+  "groups": [
+    {
+      "name": "single_merge",
+      "n": 100,
+      "window_sec": 60,
+      "seeds": [
+        20000,
+        20080
+      ]
+    },
+    {
+      "name": "layered20",
+      "n": 200,
+      "window_sec": 120,
+      "seeds": [
+        21000,
+        21020
+      ]
+    },
+    {
+      "name": "layered40",
+      "n": 200,
+      "window_sec": 120,
+      "seeds": [
+        22000,
+        22020
+      ]
+    }
+  ],
+  "construction_modes": [
+    "composite",
+    "delay_first"
+  ],
+  "methods": [
+    "SPC",
+    "SPC-UR",
+    "SPC-WSR"
+  ],
+  "expected_records": 720,
+  "independent_scenarios": 120,
+  "construction_keys": {
+    "composite": [
+      "J",
+      "d",
+      "F",
+      "route",
+      "layers",
+      "lanes"
+    ],
+    "delay_first": [
+      "d",
+      "J",
+      "F",
+      "route",
+      "layers",
+      "lanes"
+    ]
+  },
+  "controls": "Same inputs, candidates, priority dispatch, structural coefficients, 0.05 airborne coefficient, resources, stable enumeration, evaluation weights 3/2/1, delay-first reinsertion tuple, current-delay bounds and 50-pass cap. UR differs from WSR only in pressure weights.",
+  "initialization": "Prepare templates once per scenario; construct once per mode and copy its exact schedule to SPC, UR and WSR. Independent new interval index for each reinsertion. Rotate mode and method execution order by scenario. Archive matching initial signatures.",
+  "analysis": {
+    "unit": "Whole paired scenario; networks analyzed separately",
+    "bootstrap_replicates": 20000,
+    "bootstrap_seed": 2026101208,
+    "intervals": "Pointwise paired scenario percentile bootstrap 95% intervals; descriptive post-hoc analysis, no new confirmatory p-values or equivalence claim. Shared resample indices within network for all six cells.",
+    "contrasts": [
+      "UR vs own SPC",
+      "WSR vs own SPC",
+      "WSR vs own UR",
+      "delay_first minus composite recovery rates for UR and WSR",
+      "delay_first minus composite weighting increment",
+      "delay_first minus composite absolute W for each method"
+    ],
+    "relative_gain": "100*(W_reference-W_target)/W_reference per scenario, then mean; report absolute weighted seconds saved too. Both zero gives zero, zero reference and positive target is undefined and flagged.",
+    "study_reference_pct": 1.0,
+    "reference_interpretation": "Previous study recovery reference only, not commercial validation or a new significance threshold.",
+    "service": "Report initial/final per-flight means and within-mode changes in completion-from-request, airborne time, horizontal and vertical distance; counts/proportions worse than own initial schedule; paired cross-mode differences for each method.",
+    "timing": "Separate shared template and mode construction durations, method-specific reinsertion and check duration; combined stage sums reuse initialization observations and are descriptive, not independently repeated or equal-compute benchmarks.",
+    "failures": "Retain all scenarios and failed records, report coverage; no favorable seed replacement or conditional complete-only unconditional claims. Pass caps reported separately from no-change termination."
+  },
+  "audits": [
+    "development parity with preserved solver",
+    "all 360 composite schedules compared to prior archived schedules",
+    "same inputs and mode-specific initial fingerprints",
+    "reconstruct every accepted update and check strict tuple improvement, current-delay protection and resource feasibility",
+    "recompute objectives, resource occupancy and analytic speed limits",
+    "independent nominal interval geometry on all complete final records, cache only exact motion+threshold signatures",
+    "prior evidence and manuscript SHA256 preservation"
+  ],
+  "scope_limits": "Changing construction changes incumbents and individual caps. Between-mode recovery difference is a sensitivity contrast, not an additive causal decomposition of objective mismatch. No new WSR-S/LNS runs.",
+  "prior_evidence": "../Drones_Revision_Stage7",
+  "manuscript_baseline": "../Drones_Revision_Expansion/minor_step7_commitments"
+}

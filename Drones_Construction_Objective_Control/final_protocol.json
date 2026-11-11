@@ -1,0 +1,54 @@
+{
+  "version": "unified-model-v1-2026-10-08",
+  "status": "Locally fixed before the new follow-up runs; not externally preregistered. Prior Stage1-3 results informed this design.",
+  "scope": "Unify the final model and measure reinsertion and weighting separately. No new state-of-the-art or flight-readiness claim.",
+  "physics": {
+    "reference_speed_mps": 12.0,
+    "vertical_speed_mps": {"rescue": 3.0, "cargo": 2.5, "inspection": 2.0},
+    "slot_sec": 2.0,
+    "edge_trailing_sec": 2.0,
+    "node_buffer_each_side_sec": 8.0,
+    "vertical_buffer_each_side_sec": 8.0,
+    "max_delay_sec": 7200.0,
+    "sample_sec": 0.25,
+    "origin_reservation": true,
+    "edge_occupancy": "Exclusive full-edge/layer/lane occupancy, not moving-block following",
+    "type_assignment": "Independent uniform stream with random.Random(seed*31+7), keeping the existing request generator"
+  },
+  "policy": {
+    "passes": 50,
+    "evaluation_weights": {"2": 3.0, "5": 2.0, "10": 1.0},
+    "structural_coefficients_sec": [3.0, 8.0, 30.0],
+    "air_time_weight": 0.05,
+    "methods": ["FCFS-ID", "NP-UR-ID", "SPC", "SPC-UR", "SPC-WSR"],
+    "ablation": "SPC-UR and SPC-WSR share strict construction, candidates, tie-breaking, acceptance and cap; only reinsertion pressure weights change"
+  },
+  "main": {"network": "single_merge", "requests": 100, "window_sec": 60, "seeds": [100, 130]},
+  "large": {
+    "networks": ["layered20", "layered40"], "requests": [100, 200], "window_sec": 120,
+    "seeds": [0, 10], "new_method": "SPC-UR",
+    "inherited_methods": ["FCFS-ID", "SPC", "SPC-WSR"],
+    "interpretation": "Exploratory matched extension of already inspected corrected-domain runs; historical and new timings are not compared inferentially"
+  },
+  "sensitivity": {
+    "seeds": [100, 110], "network": "single_merge", "requests": 100, "window_sec": 60,
+    "pressure_weights": {"mild": {"2": 2.0, "5": 1.5, "10": 1.0}, "strong": {"2": 5.0, "5": 3.0, "10": 1.0}},
+    "structural_multipliers": [0.5, 2.0],
+    "evaluation": "Always evaluate with 3/2/1; do not change the metric when changing policy weights. Scale 3/8/30 only; hold air-time coefficient fixed.",
+    "interpretation": "Exploratory sensitivity, no parameter selected for favorable outcomes"
+  },
+  "inference": {
+    "unit": "paired random seed",
+    "primary_metric": "weighted ground delay evaluated with 3/2/1",
+    "primary_comparisons": [["SPC", "SPC-WSR"], ["SPC-UR", "SPC-WSR"], ["FCFS-ID", "SPC-WSR"]],
+    "test": "Two-sided Wilcoxon with SciPy auto method; Holm family of three main comparisons; all-zero differences get p=1",
+    "bootstrap_replicates": 10000, "bootstrap_seed": 20261008,
+    "secondary": "Total delay, tail delay, within-seed priority means, structural actions and runtime are descriptive with pointwise intervals where supplied",
+    "large_and_sensitivity": "Descriptive paired effects only; historical 32-test family remains historical evidence",
+    "sample_size": "30 new seeds fixed in advance for a paired follow-up, no formal power claim or significance-based extension"
+  },
+  "timing": "Sequential runs; one BLAS/OpenMP thread requested and actual pool state saved. Include preprocessing, construction, reinsertion and reservation audit, exclude trajectory validation and I/O. Report stage times and one observation per seed.",
+  "safety": "Reconstruct archived selections, validate keys and analytic speed envelopes, and sample pairwise cylindrical separation at 0.25 s. This is not continuous-time validation.",
+  "replay": "Retain prior real airplane-icon frames only after rerunning seeds 24 and 4 with the unified model and checking full schedule/trajectory equivalence; otherwise regenerate the affected replay. Not part of the new-seed main comparison.",
+  "expected_new_records": 232
+}

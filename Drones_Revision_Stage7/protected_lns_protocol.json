@@ -1,0 +1,31 @@
+{
+  "version": "protected-lns-v1-2026-10-08",
+  "status": "Fixed locally before these runs, after inspecting step-3 results; not an external preregistration or an independent confirmatory sample.",
+  "purpose": "Test whether WSR has an aggregate-delay advantage over group repair under matched individual ground-delay protection; do not assume such an advantage.",
+  "search": {
+    "initialization": "SPC",
+    "neighborhood_size": 8,
+    "improvement_limit_sec": 10,
+    "iteration_limit": 100000,
+    "rng_seed_offset": 730000,
+    "objective": "Fixed 3/2/1 weighted ground delay; strict group improvement",
+    "low_level": "Same earliest-departure, structural-cost, duration and canonical tie order as the preserved step-3 LNS-R",
+    "modes": {
+      "free": "LNS-U: no individual bound beyond the common domain",
+      "initial": "LNS-I: every accepted allocation satisfies d_i <= d_i(SPC); intermediate reversals below this bound are allowed",
+      "monotone": "LNS-M: every accepted group update satisfies d_i(new) <= d_i(current) for every selected flight"
+    },
+    "timing": "Sequential, one requested numerical-library thread; include template construction, SPC initialization and tracing in total solver time. Exclude trajectory audits and disk IO. Rotate main-mode execution order by seed. No concurrent tests or PDF rendering during formal timing.",
+    "acceptance": "Strict weighted group improvement; all replacements checked before commit; complete rollback after failure, rejection or time limit",
+    "optimality_claim": false
+  },
+  "runs": {
+    "main": {"networks": ["single_merge"], "requests": [100], "seeds": [100,130], "window_sec": 60, "modes": ["free","initial","monotone"]},
+    "large": {"networks": ["layered20","layered40"], "requests": [100,200], "seeds": [0,10], "window_sec": 120, "modes": ["initial"]}
+  },
+  "expected_records": 130,
+  "comparators": "Preserved WSR and SPC records, matched by exact scenario/model hashes and reconstructed initial allocation. The 30 fresh LNS-U runs control the implementation and execution period for the main protection ablation; preserve previous LNS-R records separately. Large-network unrestricted comparison uses the explicitly historical step-3 LNS-R records.",
+  "reporting": "All prescribed cases including failures; paired seed means and improved/tied/worse counts; final violations of SPC caps; accepted-update reversals; total and weighted delay; full total runtime and anytime value at each historical WSR completion time. Also compare modes at their common completed-iteration prefix to separate iteration count from wall-clock stopping. No new p-values, no tuning on formal seeds, no inference that LNS-I/LNS-M dominate every protected algorithm.",
+  "operational_scope": "A declared latest-entry commitment before dispatch; early entry, route/layer/speed revision and deterministic known demand must be permissible. No claim that contracts were observed or that UAV regulations universally prohibit postponement. Ground delay only; no arrival/energy/path-stability protection.",
+  "verification": "Test cap enforcement against exhaustive grid enumeration, rollback and legacy unrestricted equivalence. Save every accepted replacement; reconstruct final and accepted schedules, verify trace, caps, objective, candidates, resource feasibility, and final 0.25 s sampled separation. Shared geometry remains a limitation."
+}

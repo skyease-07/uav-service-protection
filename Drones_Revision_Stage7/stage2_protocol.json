@@ -1,0 +1,22 @@
+{
+  "version": "stage2-v1",
+  "purpose": "Prospectively specified speed-bounded synthetic extensions; not flight calibration",
+  "reference_speed_mps": 12.0,
+  "cruise_factors": {"rescue": 1.1, "cargo": 0.95, "inspection": 0.85},
+  "vertical_speed_mps": {"rescue": 3.0, "cargo": 2.5, "inspection": 2.0},
+  "slot_sec": 2.0,
+  "edge_headway_sec": 2.0,
+  "node_buffer_each_side_sec": 8.0,
+  "vertical_buffer_each_side_sec": 8.0,
+  "max_delay_sec": 7200.0,
+  "trajectory_sample_sec": 0.25,
+  "type_assignment": "independent, existing seed * 31 + 7 generator",
+  "pass_cap": 50,
+  "physical_reference": {"n": 100, "request_window_sec": 60, "seeds": 30, "methods": ["FCFS-ID", "SPC", "SPC-WSR"]},
+  "speed_sensitivity": {"n": 100, "request_window_sec": 60, "seeds": 10, "speed_scales": [0.75, 1.25], "methods": ["SPC-WSR"]},
+  "network_transfer": {"n": 50, "request_window_sec": 120, "seeds": 10, "networks": ["single_merge", "two_merge", "three_merge"], "methods": ["FCFS-ID", "SPC", "SPC-WSR", "CP-SAT"]},
+  "cp_sat": {"objective": "sum of mission-weighted ground delay", "search_time_limit_sec": 20.0, "workers": 1, "seed": 20261007, "warm_start": "SPC-WSR", "extra_weighted_objective_cutoff": "at most the warm-start objective"},
+  "inference": "seed-level paired differences; 10000 bootstrap resamples; two-sided Wilcoxon; Holm over all declared comparisons",
+  "parameter_tuning": "No tuning against observed method improvements",
+  "limits": ["No acceleration, wind, tracking uncertainty, or flight-test data", "No claim of reproducing a published state-of-the-art UAV planner", "No NetLogo rerun in this stage"]
+}

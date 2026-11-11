@@ -1,0 +1,34 @@
+{
+  "version": "pbs-r-v1-2026-10-08",
+  "literature": {
+    "title": "Searching with Consistent Prioritization for Multi-Agent Path Finding",
+    "authors": "Ma, H.; Harabor, D.; Stuckey, P. J.; Li, J.; Koenig, S.",
+    "venue": "AAAI 2019, 33, 7643-7650",
+    "doi": "10.1609/aaai.v33i01.33017643",
+    "full_text": "https://arxiv.org/html/1812.06356v1",
+    "algorithm": "PBS Algorithm 2 and UpdatePlan (Section 5)",
+    "implementation": "Independent resource-domain adaptation; not original authors' code"
+  },
+  "search": {
+    "initial_priority_order": "empty",
+    "warm_start": null,
+    "high_level": "Depth-first binary priority-order search; smaller weighted-cost child first",
+    "conflict_selection": "Earliest shared resource slot, then flight-ID pair",
+    "low_level": "Exact minimum departure delay within the common declared candidates and grid",
+    "tie_breaking": "Fewest incomparable-agent conflicts, then descendant conflicts, structural cost, finish, canonical structure",
+    "objective": "Fixed 3/2/1 mission-weighted ground delay; no structural penalty in objective",
+    "stop": "First conflict-free leaf or total wall time/expansion limit",
+    "time_limit_sec": 60,
+    "expansion_limit": 20000,
+    "timing_scope": "Template construction, root planning and high-level search included; validation and disk IO excluded",
+    "optimality_claim": false,
+    "individual_delay_protection": false
+  },
+  "runs": {
+    "small": {"networks": ["single_merge", "layered20"], "requests": [12, 30], "seeds": [0, 5], "window_sec": 120},
+    "main": {"networks": ["single_merge"], "requests": [100], "seeds": [100, 130], "window_sec": 60},
+    "large": {"networks": ["layered20", "layered40"], "requests": [100, 200], "seeds": [0, 10], "window_sec": 120}
+  },
+  "development_seeds": [901, 902, 903, 904, 905],
+  "analysis": "Descriptive paired comparison; no new significance claims or pooling into the original three-test family. Report every failure and denominator. Same inputs/feasible domain, different search preferences; quantify individually increased ground delays relative to SPC-WSR."
+}

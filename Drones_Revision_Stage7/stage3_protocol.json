@@ -1,0 +1,44 @@
+{
+  "version": "stage3-v2-origin-reservation",
+  "protocol_revision": "V1 wider-network runs exposed missing origin reservations; retained under stage3_failed_v1. V2 fixed before new formal runs.",
+  "resource_extension": "Add origin NODE occupancy at scheduled departure, selected first-edge layer, with the existing 8s buffer on each side. Common to every Stage3 method.",
+  "nature": "Local prospective synthetic extension; not public preregistration",
+  "physics": "stage2_protocol.json, speed scale 1",
+  "large": {
+    "networks": ["layered20", "layered40"],
+    "requests": [100, 200],
+    "request_window_sec": 120,
+    "seeds": 10,
+    "methods": ["FCFS-ID", "SPC", "SPC-WSR"],
+    "route_policy": "all directed four-edge paths for selected OD, sorted lexically; at most four retained",
+    "layers": [1, 2],
+    "lanes_per_edge": 1,
+    "passes": 50
+  },
+  "baseline": {
+    "networks": ["single_merge", "layered20"],
+    "requests": [12, 30],
+    "request_window_sec": 120,
+    "seeds": 5,
+    "methods": ["SPC-WSR", "CBS-R", "CP-SAT"],
+    "cp_search_limit_sec": 30,
+    "cbs_search_limit_sec": 20,
+    "cbs_expansion_limit": 3000,
+    "cbs_open_limit": 6000,
+    "objective": "weighted ground delay only; structural penalties excluded",
+    "warm_start": "SPC-WSR upper bound for both solvers; label warm-start-only when no improvement"
+  },
+  "statistics": {
+    "independent_unit": "seed",
+    "bootstrap_replicates": 10000,
+    "rng": 20261007,
+    "test": "two-sided paired Wilcoxon; one Stage3 Holm family, separate from Stage2"
+  },
+  "replay": {
+    "source": "Stage2 speed-bounded single_merge n100 window60 seed24 SPC-WSR",
+    "sample_step_sec": 0.25,
+    "camera_overview_xyz": [50, -100, 90],
+    "camera_target_xyz": [50, 3, 12],
+    "frame_policy": "overview at maximum active count; detail at most active UAVs within 120m of C; earliest ties"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "version": "eecbs-r-v1-2026-10-08",
+  "literature": {
+    "algorithm": "EECBS/ECBS focal-search family",
+    "citation": "Li, J.; Ruml, W.; Koenig, S. EECBS: A Bounded-Suboptimal Search for Multi-Agent Path Finding. AAAI 2021, 35, 12353-12362.",
+    "doi": "10.1609/aaai.v35i14.17466",
+    "scope": "Published MAPF search control adapted to the unified time-slot reservation domain; not the authors' original code."
+  },
+  "adaptation": {
+    "name": "EECBS-R",
+    "resource_conflict": "Shared edge-layer-lane, node-layer, vertical-transition or origin/destination resource slot",
+    "low_level": "Exact earliest-delay search over the declared route/layer/lane/speed alternatives and 2 s departure grid under per-flight resource bans",
+    "high_level": "OPEN lower bound plus focal selection at cost <= w * min(OPEN), secondary key number of resource conflicts",
+    "focal_weight": 1.5,
+    "warm_start": "SPC-WSR schedule used as a common feasible incumbent for the main scale; no claim of an independent cold-start optimum at n=100",
+    "objective": "Fixed 3/2/1 mission-weighted ground delay",
+    "structural_cost": "Excluded from the baseline objective, matching the archived CP-SAT/CBS baseline; reported for the returned schedule"
+  },
+  "runs": {
+    "small": {"networks": ["single_merge", "layered20"], "requests": [12, 30], "seeds": [0, 5], "window_sec": 120, "time_limit_sec": 30, "expansion_limit": 20000, "open_limit": 50000},
+    "main": {"network": "single_merge", "requests": 100, "seeds": [100, 130], "window_sec": 60, "time_limit_sec": 30, "expansion_limit": 20000, "open_limit": 50000},
+    "large": {"networks": ["layered20", "layered40"], "requests": [100, 200], "seeds": [0, 10], "window_sec": 120, "time_limit_sec": 30, "expansion_limit": 20000, "open_limit": 50000}
+  },
+  "inference": "Baseline contrasts are descriptive and separate from the prespecified three-test main family; seed is the paired unit. No significance claim is added post hoc."
+}

@@ -1,0 +1,29 @@
+{
+  "version": "service-split-v1-2026-10-12",
+  "status": "Post-hoc mechanism and robustness analysis of 120 previously inspected scenarios; locally locked before new executions, not a new holdout or external preregistration.",
+  "groups": [
+    {"name":"single_merge","n":100,"window_sec":60,"seeds":[20000,20080]},
+    {"name":"layered20","n":200,"window_sec":120,"seeds":[21000,21020]},
+    {"name":"layered40","n":200,"window_sec":120,"seeds":[22000,22020]}
+  ],
+  "methods": ["SPC","WSR","F","T","D","ALL"],
+  "guards": {"SPC":0,"WSR":0,"F":1,"T":2,"D":12,"ALL":15},
+  "mask_bits": {"1":"finish_sec","2":"airborne_sec","4":"horizontal_m","8":"vertical_m"},
+  "expected_records":720,
+  "independent_scenarios":120,
+  "controls":"One exact composite SPC construction per scenario, immutable shared starts, independent reservation indices. All reinsertion uses WSR pressure and evaluation weights 3/2/1, original lexicographic key, current individual delay cap, candidate enumeration and 50-pass cap. Preserve fallback. F/T/D/ALL add current-plan service guards only. D protects horizontal and vertical distance separately. T plus ground-delay protection implies F; no double counting independent restrictions.",
+  "tolerances":{"time_sec":1e-8,"distance_m":1e-6},
+  "logging":"One compressed event per flight visit: earliest feasible step for every structural template (-1 if none within current cap), all improving candidates with multi-label violations and service deltas, counts of infeasible/non-improving/improving, best unguarded candidate and best allowed candidate for every guard. Improvement is relative to current plan, not enumeration-dependent running best. Accepted replacements and strict delay reductions are separate. Full candidate fields reconstructible from immutable template index and step.",
+  "shadow":"At every WSR visit evaluate F/T/D/ALL on exactly the same state without mutating WSR; best-blocked, alternative-available and fully-blocked opportunities use visits with at least one otherwise feasible strict-key improvement as denominator. Policy trajectories reported separately. Candidate counts are not independent statistical samples or causal contributions; inspect exact overlapping masks.",
+  "analysis":{
+    "unit":"Whole paired scenario, networks separate; descriptive pointwise 95% percentile bootstrap intervals, no new confirmatory p-values",
+    "bootstrap_replicates":20000,"bootstrap_seed":2026101209,
+    "endpoints":"Final W, per-scenario 100*(W_SPC-W_method)/W_SPC recovery, paired loss versus WSR, absolute savings, accepted and strict delay updates, passes and caps, flight service means/deltas/worse proportions and positive-delta tails.",
+    "retention":"100*sum(W_SPC-W_method)/sum(W_SPC-W_WSR), ratio of aggregate gains, not mean individual ratios. Paired bootstrap; undefined denominator recorded. Separately count zero WSR gain scenarios.",
+    "mechanism":"Per-network exact mask counts and opportunity categories, scenario-level rates with zero-opportunity scenarios marked undefined; report numerator and denominator. Common-state candidates grouped by route/layer/lane/speed revisions and service-delta magnitudes; witness rule earliest seed/pass/visit/candidate within each network and violation bit. Network size is confounded with load and request-window configuration.",
+    "failures":"Preserve every prescribed scenario and outcome; no replacements, no favorable-only unconditional claims. Zero W_SPC gives recovery zero only if target also zero; otherwise undefined. Pass cap is not convergence.",
+    "timing":"Sequential one-host runs, native pools limited to one, rotate branch order by seed; log shared preparation/construction separately. Instrumented runtime is descriptive and not compared to uninstrumented historical timings."
+  },
+  "verification":"Before lock: adversarial guard/multi-label/statistical tests, small development parity against original unguarded and joint solvers, logging-enabled/disabled parity. Formal: 360 SPC/WSR/ALL archived parity, all shared starts/inputs, log conservation and independent event reconstruction, every accepted update strict key/current delay/active service/resource checks, final speed/capacity/independent nominal geometry. Preserve prior evidence and manuscript hashes.",
+  "scope":"No new construction objective, pressure policy, initial-only cap, LNS comparison, energy estimate or topology-only causal claim. Manuscript starts from minor_step8_construction."
+}

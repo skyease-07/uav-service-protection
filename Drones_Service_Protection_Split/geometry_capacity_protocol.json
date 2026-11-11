@@ -1,0 +1,40 @@
+{
+  "version": "geometry-capacity-v1-2026-10-08",
+  "status": "Locally fixed before step-4 formal runs; follows inspected earlier results; not externally preregistered.",
+  "scope": "Independent reconstruction and interval separation audit of nominal scheduled trajectories; quantify resource conservatism without changing the current model or optimizing parameters after seeing results.",
+  "geometry": {
+    "existing_record_groups": {"final":232,"inherited_corrected":180,"lns_baseline":120,"literature_baseline":90,"protected_lns":130},
+    "expected_existing_records":752,
+    "domain": "From entry at initial airborne layer through final route endpoint, including all segment boundaries; no physical takeoff, landing, acceleration or uncertainty",
+    "independent_reconstruction": "Read scenario CSV, network/type JSON and selected route/layer/lane/speed/delay; no scheduler position, segment-builder or sampled-validator call in the independent module",
+    "predicate": "Loss when horizontal distance < larger type horizontal threshold AND vertical distance < larger type vertical threshold",
+    "method": "Split flight pairs at segment boundaries; exact quadratic horizontal minimum for affine motion, analytic derivative/Lipschitz lower bounds for curved motion; adaptive subdivision; vertical extrema from affine height",
+    "numerical_guard_m":0.000001,
+    "min_interval_sec":0.000001,
+    "max_depth":30,
+    "max_cells_per_segment_pair":100000,
+    "classification": "Separated / violation with time witness / unresolved. Unresolved never counted safe. Analytical bounds evaluated in float64 with an explicit guard, not a directed-rounding formal arithmetic proof."
+  },
+  "network_sensitivity": {
+    "network":"single_merge","requests":100,"seeds":[100,130],"method":"SPC-WSR",
+    "buffer_each_side_sec":[0,2,4,8,12],
+    "buffer_sweep_request_window_sec":60,
+    "buffer_change":"Change node before/after and vertical buffers together; hold edge trailing 2 s, geometry, thresholds, speed, objective and scheduler fixed",
+    "demand_request_scales":[1,5,15,30],
+    "demand_buffer_sec":8,
+    "paired_requests":"Multiply each original requested time by the integer scale, retaining exact IDs, priorities, types and routes; original 60 s window becomes 60/300/900/1800 s; same integer 2 s added-delay grid",
+    "expected_new_records":210,
+    "existing_reference_records":30,
+    "baseline_reuse":"Buffer=8 and request_scale=1 uses unchanged 30 archived WSR records, shared by the two one-factor sweeps",
+    "report":"Completion, weighted/total delay, makespan, finite-batch clearance rate, actual bottleneck occupancy, and independent nominal continuous-interval separation status. No new p-values, no unsafe result presented as deployable capacity, no tuning of final_protocol.json."
+  },
+  "isolated_edge": {
+    "edge":"E3","layer":1,"flights":50,"types":["rescue","cargo","inspection"],
+    "buffer_each_side_sec":[4,8,12],"modes":["whole_edge","following"],
+    "expected_records":18,
+    "headways":"On a 2 s grid: whole-edge max(T+2,2b); homogeneous straight-lane following max(R/v,2b). Both retain the same entry/exit node spacing; buffers >=4 s avoid threshold-equality ambiguity.",
+    "interpretation":"Periodic single-lane homogeneous packing benchmark under deterministic prescribed speed, not network capacity, a new deployed scheduler, heterogeneous catch-up or merge feasibility. Every finite benchmark independently separation-audited."
+  },
+  "adversarial_tests":"Between-sample crossing, closed endpoints, vertical transition, curved trajectories, near-threshold unresolved status, disjoint-resource geometric crossing, and geometrically safe following rejected by full-edge reservation. Include independent-reconstruction cross-check against existing trajectory definitions only in tests.",
+  "timing":"Formal schedule-generation sweeps sequential. Wall times descriptive, not a new algorithm runtime comparison; audit and figure work may run concurrently only after timed generation finishes."
+}

@@ -1,0 +1,40 @@
+{
+  "version": "confirmation-service-v1-2026-10-08",
+  "status": "Prospective local lock before generation of held-out scenarios; not externally registered. All preceding experiments are development/exploratory evidence.",
+  "model": "Unchanged final_protocol.json physics, scoring, evaluation weights and 50-pass cap; no outcome-dependent tuning.",
+  "main": {"network": "single_merge", "n": 100, "window_sec": 60, "seeds": [20000,20080], "methods": ["SPC","SPC-UR","SPC-WSR","WSR-S"]},
+  "large": [
+    {"network": "layered20", "n": 200, "window_sec": 120, "seeds": [21000,21020], "methods": ["SPC","SPC-UR","SPC-WSR","WSR-S"]},
+    {"network": "layered40", "n": 200, "window_sec": 120, "seeds": [22000,22020], "methods": ["SPC","SPC-UR","SPC-WSR","WSR-S"]}
+  ],
+  "literature": {"network": "single_merge", "n": 100, "window_sec": 60, "seeds": [20000,20030], "methods": ["LNS-I","LNS-M"], "iterations": 1000, "neighborhood": 8, "rng_offset": 1030000, "wall_clock_stopping": false, "scope": "Prespecified descriptive robustness, not a third confirmatory hypothesis or equal-compute ranking. Exactly 1000 randomized group attempts unless objective becomes zero; one independently seeded run per scenario and mode. Report total contemporaneous runtime and WSR-time anytime coverage."},
+  "expected_records": 540,
+  "independent_scenarios": 120,
+  "inference": {
+    "unit": "Whole paired scenario/seed; never individual flight or method record",
+    "endpoint": "For comparator C and target WSR: g_s=100*(W_C-W_WSR)/W_C, percentage points; primary estimand is E[g_s], not percentage reduction of pooled means",
+    "family": [
+      {"id":"H1","comparator":"SPC","null_upper_margin_pp":1.0,"alternative":"Mean paired reduction exceeds 1 percentage point"},
+      {"id":"H2","comparator":"SPC-UR","null_upper_margin_pp":0.0,"alternative":"Mean paired reduction is positive"}
+    ],
+    "test": "One-sided paired-scenario Student t test on g_s against the fixed margin, Holm family of two at 0.05; n=80 fixed. This is mean-based inference under independent scenarios, asymptotic robustness rather than a distribution-free guarantee.",
+    "intervals": "Two-sided t 95% pointwise mean interval; Bonferroni 97.5% one-sided lower bounds for two simultaneous directional claims; fixed 20000 scenario-bootstrap percentile intervals as a robustness description, not a second decision rule",
+    "bootstrap_seed": 2026100856,
+    "weighting_practical_reference_pp": 0.5,
+    "interpretation": "H1 1% and H2 0.5% practical references are analyst-selected study thresholds, not validated commercial thresholds. H2>0 does not establish H2>=0.5. A nonsignificant difference is not equivalence.",
+    "sample_size": "n=80 chosen before holdout generation. Planning uses only prior 30-seed normalized SDs inflated by 25%, normal approximation at one-sided Bonferroni alpha=0.025 and power=0.80; detect a 0.5 pp weighting effect versus zero. Archive exact calculation and its limitations.",
+    "failures": "Archive every prescribed outcome, no replacement seeds or significance-driven extension. If any primary method is incomplete, has resource/speed errors, a nominal geometric violation, or unresolved geometry, report failure frequency and do not issue unconditional confirmatory success claims from complete-only inference. Zero comparator delay contributes g=0 only if target also zero; otherwise flag the endpoint undefined.",
+    "secondary": "All service costs, larger networks, LNS, runtimes, subgroup and deadline-tolerance results are descriptive; 95% scenario-bootstrap intervals are pointwise, no further significance declarations. Report every prespecified group."
+  },
+  "service": {
+    "reference": "Same-scenario SPC allocation",
+    "endpoints": ["ground delay", "network completion relative to request", "network airborne duration", "actual horizontal arc length", "vertical travel distance", "vertical transition count", "route/layer/lane/speed revisions relative to SPC", "priority-specific and vehicle-type-specific waiting/completion"],
+    "guarded_variant": "WSR-S uses identical SPC, ordering, candidates, tie-breaking and cap as WSR. Additionally each accepted update must not increase its flight's completion time, airborne duration, actual horizontal length or vertical distance relative to current allocation. Existing allocation remains fallback. Save full accepted replacements.",
+    "length": "Integrate the derivative norm of each selected line or curved lane; absolute integration tolerance 1e-8 m, relative 1e-10. Compare lengths with 1e-6 m numerical tolerance. Do not equate route_index>0 with a detour.",
+    "deadline_tolerances_sec": [0,30,60],
+    "deadline_interpretation": "Hypothetical completion allowance relative to SPC, not observed customer deadlines. Report incidence and positive lateness only.",
+    "limits": "No calibrated power, battery, mass, money, weather, acceleration, takeoff/landing or real operator contract. Flight time, length and climb are distinct service proxies, not energy estimates. Service guard does not freeze the four-dimensional plan or prove operational acceptability."
+  },
+  "execution": "Sequential on one host, native thread pools limited to one where supported and actual pools logged. Rotate method order by scenario; no simultaneous heavy jobs during formal generation. Fixed-work policies; runtime is descriptive, no historical runtime used as a control.",
+  "verification": "Before locking: adversarial service-guard tests, unguarded adapter parity with original on development seeds, metric and statistics tests. After generation: input/source/lock hashes, exact case set, shared SPC, every accepted update, resource/speed checks, independent final-motion interval audit, and preservation of prior evidence. Geometry settings unchanged from step4."
+}

@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-11",
+  "python": "3.13.5",
+  "unit_tests": 26,
+  "unit_tests_passed": true,
+  "smoke_studies": [
+    "main including LNS-I/M",
+    "construction",
+    "service"
+  ],
+  "source_files_verified": 51,
+  "paper_scenario": {
+    "network": "single_merge",
+    "n": 100,
+    "seed": 20000,
+    "window_sec": 60,
+    "archive_parity": [
+      {
+        "method": "SPC",
+        "weighted_delay_sec": true,
+        "initial_signature": true,
+        "schedule_signature": true
+      },
+      {
+        "method": "SPC-UR",
+        "weighted_delay_sec": true,
+        "initial_signature": true,
+        "schedule_signature": true
+      },
+      {
+        "method": "SPC-WSR",
+        "weighted_delay_sec": true,
+        "initial_signature": true,
+        "schedule_signature": true
+      },
+      {
+        "method": "WSR-S",
+        "weighted_delay_sec": true,
+        "initial_signature": true,
+        "schedule_signature": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "version": "lns-r-v1-2026-10-08",
+  "literature": {
+    "title": "Anytime Multi-Agent Path Finding via Large Neighborhood Search",
+    "authors": "Li, J.; Chen, Z.; Harabor, D.; Stuckey, P. J.; Koenig, S.",
+    "venue": "IJCAI 2021, 4127-4135", "doi": "10.24963/ijcai.2021/568",
+    "full_text": "https://www.ijcai.org/proceedings/2021/0568.pdf",
+    "variant": "Section 4 LNS; Section 5.3 random neighborhoods; Section 7 Experiment 2 random-priority PP repair; not full adaptive LNS"
+  },
+  "search": {
+    "name": "LNS-R", "neighborhood_size": 8, "improvement_limit_sec": 10,
+    "iteration_limit": 100000, "rng_seed_offset": 730000,
+    "objective": "Fixed 3/2/1 mission-weighted ground delay",
+    "acceptance": "Strictly lower neighborhood weighted delay; individual delays may increase",
+    "low_level": "Exact earliest departure in declared route/layer/lane/speed candidates and 2 s grid; ties by structural cost then airborne duration/canonical structure",
+    "timing": "10 s improvement budget plus separately recorded template and initialization time; audit and disk IO excluded",
+    "optimality_claim": false
+  },
+  "runs": {
+    "small": {"networks": ["single_merge","layered20"], "requests": [12,30], "seeds": [0,5], "window_sec": 120, "initializations": ["SPC"]},
+    "main": {"networks": ["single_merge"], "requests": [100], "seeds": [100,130], "window_sec": 60, "initializations": ["SPC","random-PP"]},
+    "large": {"networks": ["layered20","layered40"], "requests": [100,200], "seeds": [0,10], "window_sec": 120, "initializations": ["SPC"]}
+  },
+  "inference": "Descriptive paired extension; no new p-values or change to the primary three-test family. All 120 records retained, including failures. Shared-SPC starts isolate the improvement operator; 30 independent random-PP starts assess reliance on initialization. Report individually worsened flights and equal-time objectives from anytime trace. No parameter selection on formal seeds."
+}
