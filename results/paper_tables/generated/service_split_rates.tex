@@ -1,0 +1,21 @@
+\begin{table}[!htbp]
+\caption{Mean scenario-level common-state rejection rates (percent), with pointwise 95\% scenario-bootstrap intervals. The denominator within each scenario is its number of improving opportunities. Zero-opportunity scenarios are counted in the last column and excluded from these conditional rates only.}\label{tab:service-split-rates}
+\centering\small
+\begin{tabularx}{\textwidth}{l l L L r}
+\toprule Network & Guard & Best blocked [95\% CI] & Fully blocked [95\% CI] & Zero opp.\\\midrule
+Merge & F & 10.38 [5.47, 16.48] & 10.09 [5.12, 16.05] & 5\\
+Merge & T & 13.33 [8.41, 19.14] & 11.70 [6.81, 17.62] & 5\\
+Merge & D & 12.57 [8.51, 17.60] & 10.79 [6.82, 15.79] & 5\\
+Merge & ALL & 15.93 [10.92, 21.87] & 13.70 [8.72, 19.61] & 5\\
+20 nodes & F & 12.72 [7.61, 19.03] & 11.93 [6.63, 18.38] & 0\\
+20 nodes & T & 18.67 [13.99, 24.30] & 13.96 [8.67, 20.30] & 0\\
+20 nodes & D & 11.90 [8.12, 16.34] & 10.38 [6.39, 14.99] & 0\\
+20 nodes & ALL & 18.67 [13.96, 24.19] & 13.96 [8.67, 20.38] & 0\\
+40 nodes & F & 13.24 [9.47, 17.52] & 10.17 [7.10, 13.69] & 0\\
+40 nodes & T & 26.49 [21.10, 32.15] & 14.59 [10.95, 18.91] & 0\\
+40 nodes & D & 14.59 [10.92, 18.55] & 9.07 [6.06, 12.49] & 0\\
+40 nodes & ALL & 26.49 [21.18, 32.20] & 14.59 [10.96, 18.80] & 0\\
+\bottomrule
+\end{tabularx}
+\par\smallskip\footnotesize Conditional-rate intervals use separate resample draws per guard and endpoint; identical rates can have slightly different Monte Carlo interval endpoints. Recovery estimates retain shared paired resamples.
+\end{table}

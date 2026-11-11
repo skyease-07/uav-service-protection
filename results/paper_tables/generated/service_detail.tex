@@ -1,0 +1,53 @@
+\begin{table}[!htbp]
+\centering\small
+\caption{WSR service changes in 80 held-out merge scenarios. Intervals are archived pointwise scenario-bootstrap intervals. Counts are flight-level incidence among 8000 flights.}\label{tab:service-detail}
+\begin{tabularx}{\textwidth}{L R L R}
+\toprule
+Outcome & Mean change & 95\% interval & Increases\\\midrule
+Completion (s) & -54.311 & [-66.298, -42.877] & 131\\
+Airborne (s) & -0.372 & [-0.597, -0.160] & 346\\
+Horizontal (m) & 3.042 & [2.599, 3.493] & 422\\
+Vertical (m) & -2.788 & [-3.500, -2.112] & 44\\
+\bottomrule
+\end{tabularx}
+\end{table}
+\begin{table}[!htbp]
+\centering\small
+\caption{WSR positive-change tails, restricted to flights with an increase in the stated outcome. The population differs by row; these are descriptive flight-level summaries.}\label{tab:service-tails}
+\begin{tabularx}{\textwidth}{L R R R}
+\toprule
+Outcome & Positive mean & Positive P95 & Maximum\\\midrule
+Completion (s) & 11.45 & 24.00 & 32.00\\
+Airborne (s) & 21.05 & 40.00 & 76.00\\
+Horizontal (m) & 64.10 & 87.59 & 87.59\\
+Vertical (m) & 100.00 & 100.00 & 100.00\\
+\bottomrule
+\end{tabularx}
+\end{table}
+\begin{table}[!htbp]
+\centering\small
+\caption{WSR service strata: scenario-averaged change / number of flights with increases. Priority and type are separate partitions of the same sample. Completion and airborne values use seconds; horizontal and vertical values use meters.}\label{tab:service-strata}
+\begin{tabularx}{\textwidth}{L r R R R R}
+\toprule
+Stratum & Flights & Completion & Airborne & Horizontal & Vertical\\\midrule
+Priority 2 & 2688 & -2.82 / 47 & 0.11 / 74 & 2.22 / 88 & -1.31 / 0\\
+Priority 5 & 2633 & -39.84 / 42 & -0.21 / 90 & 2.51 / 113 & -2.03 / 3\\
+Priority 10 & 2679 & -120.33 / 42 & -1.04 / 182 & 4.67 / 221 & -5.21 / 41\\
+Type rescue & 2705 & -65.58 / 73 & -0.01 / 170 & 4.35 / 199 & -3.13 / 17\\
+Type cargo & 2601 & -50.74 / 29 & -0.52 / 86 & 2.58 / 114 & -2.79 / 11\\
+Type inspection & 2694 & -45.94 / 29 & -0.54 / 90 & 2.15 / 109 & -2.32 / 16\\
+\bottomrule
+\end{tabularx}
+\end{table}
+\begin{table}[!htbp]
+\centering\small
+\caption{Hypothetical completion allowances relative to SPC and structural revisions, out of 8000 flights per method. Allowances are study diagnostics, not customer deadlines.}\label{tab:service-allowances}
+\begin{tabularx}{\textwidth}{L R R R R}
+\toprule
+Method & 0 s exceeded & 30 s exceeded & 60 s exceeded & Plans changed\\\midrule
+SPC-UR & 140 & 2 & 0 & 698\\
+SPC-WSR & 131 & 1 & 0 & 847\\
+WSR-S & 0 & 0 & 0 & 0\\
+\bottomrule
+\end{tabularx}
+\end{table}

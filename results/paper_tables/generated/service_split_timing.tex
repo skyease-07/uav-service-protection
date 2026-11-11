@@ -1,0 +1,26 @@
+\begin{table}[!htbp]
+\caption{Search updates and stopping in the service split. Updates and strict delay cuts are mean counts per scenario; zero-update and cap columns count scenarios. Reinsertion time includes diagnostics and is not compared to uninstrumented historical runtime.}\label{tab:service-split-timing}
+\centering\small
+\begin{tabularx}{\textwidth}{l l r r r r r}
+\toprule Network & Rule & Updates & Delay cuts & Zero & Caps & Time (s)\\\midrule
+Merge & SPC & 0.00 & 0.00 & 80 & 0 & 0.018\\
+Merge & WSR & 123.92 & 122.59 & 5 & 23 & 4.211\\
+Merge & F & 40.50 & 40.02 & 31 & 8 & 2.099\\
+Merge & T & 22.59 & 22.39 & 57 & 6 & 1.109\\
+Merge & D & 0.10 & 0.10 & 73 & 0 & 0.168\\
+Merge & ALL & 0.00 & 0.00 & 80 & 0 & 0.156\\
+20 nodes & SPC & 0.00 & 0.00 & 20 & 0 & 0.062\\
+20 nodes & WSR & 82.95 & 79.50 & 0 & 0 & 22.640\\
+20 nodes & F & 70.55 & 68.35 & 0 & 0 & 21.822\\
+20 nodes & T & 67.10 & 64.90 & 0 & 0 & 19.951\\
+20 nodes & D & 67.95 & 65.30 & 0 & 0 & 20.180\\
+20 nodes & ALL & 67.10 & 64.90 & 0 & 0 & 19.996\\
+40 nodes & SPC & 0.00 & 0.00 & 20 & 0 & 0.064\\
+40 nodes & WSR & 64.70 & 61.05 & 0 & 0 & 8.686\\
+40 nodes & F & 55.75 & 53.50 & 1 & 0 & 7.972\\
+40 nodes & T & 46.45 & 44.55 & 2 & 0 & 7.659\\
+40 nodes & D & 58.50 & 56.10 & 1 & 0 & 8.134\\
+40 nodes & ALL & 46.45 & 44.55 & 2 & 0 & 7.556\\
+\bottomrule
+\end{tabularx}
+\end{table}

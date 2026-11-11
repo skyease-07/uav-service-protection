@@ -1,0 +1,46 @@
+Independent reconstruction classifies 752/752 archived final schedules as nominally separated, with 0 detected-violation and 0 unresolved records. There are 559 distinct reconstructed motion sets; identical sets reuse the geometric computation after individual input and outcome checks. The distinct-set audit covers 4,141,718 overlapping motion-segment pairs, including 73,796 with at least one curved segment. These continuous-interval numerical checks apply to the declared trajectories and do not guarantee separation for arbitrary resource-feasible schedules.
+
+Seven targeted verification checks include a collision strictly between 0.25 s sampling instants, an endpoint collision, vertical crossing, curved-path refinement, unresolved threshold/limit cases, an unrelated-edge crossing with disjoint reservation keys, and safe equal-speed following rejected by whole-edge occupancy. Independent reconstruction is also cross-checked against all declared merge-network route/layer/lane/speed combinations for each vehicle type. These adversarial and consistency checks test the implementation; flight validation remains outside their scope.
+
+\begin{table}[!htbp]
+\centering\small
+\caption{Homogeneous E3 single-lane packing with unchanged 8 s each-side node buffers. T is traversal time; rates are periodic flights per hour per lane. All 18 checks across buffers 4, 8 and 12 s pass the interval audit; only the reference buffer is tabulated.}\label{tab:isolated-capacity}
+\begin{tabular}{lrrrrr}
+\toprule
+Type & T (s) & Edge headway (s) & Following (s) & Edge rate & Following rate\\
+\midrule
+Rescue & 46 & 48 & 16 & 75.00 & 225.00\\
+Cargo & 54 & 56 & 16 & 64.29 & 225.00\\
+Inspection & 60 & 62 & 16 & 58.06 & 225.00\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Whole-edge exclusivity yields 58.06--75.00 flights/h/lane, compared with 225 for same-speed following under the identical 16 s node spacing. Following permits 3.00--3.88 times the loading rate of whole-edge reservation in this isolated setting; that ratio cannot be applied to whole-network traffic. At 4 and 12 s each-side node buffers, the homogeneous following rates are 450 and 150 flights/h/lane, respectively; endpoint constraints still limit those rates.
+
+\begin{table}[!htbp]
+\centering\small
+\caption{Paired WSR buffer and demand sensitivity, 30 seeds per row. W and D are mean weighted and total ground delay; clearance spans earliest request to last exit. S/V/U counts separated, violation and unresolved schedules under the independent interval audit. Failed geometry is diagnostic, not usable capacity.}\label{tab:capacity-sensitivity}
+\begin{tabular}{rrrrrr}
+\toprule
+Buffer (s) & Window (s) & W (s) & D (s) & Clearance (s) & S/V/U\\
+\midrule
+0 & 60 & 151,040.6 & 97,281.7 & 2,189.3 & 0/30/0\\
+2 & 60 & 155,252.4 & 100,212.1 & 2,236.7 & 30/0/0\\
+4 & 60 & 170,923.1 & 110,356.5 & 2,411.7 & 30/0/0\\
+8 & 60 & 204,789.4 & 133,250.1 & 2,865.6 & 30/0/0\\
+12 & 60 & 195,671.5 & 124,286.5 & 2,684.6 & 30/0/0\\
+8 & 300 & 182,905.5 & 122,162.7 & 2,884.7 & 30/0/0\\
+8 & 900 & 120,736.7 & 87,922.9 & 2,795.8 & 30/0/0\\
+8 & 1800 & 46,607.7 & 39,572.9 & 2,693.5 & 30/0/0\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The 240 method records in these one-factor comparisons contain 240 complete allocations: 210 new schedules and the 30 shared reference schedules. New allocations all pass reservation and speed-envelope audits. Their independent geometric outcomes are 180 separated, 30 with violations and 0 unresolved; the reference outcomes are included in the table. Reducing a temporal buffer changes both congestion and geometric protection.
+
+Zero buffers reduce mean weighted delay by 26.25\% relative to the reference, but 30/30 schedules contain geometric violations. With 2 s buffers the reduction is 24.19\% and the violation count is 0/30; with 4 s buffers they are 16.54\% and 0/30. The lower delay under failed geometry cannot justify replacing the reference setting. Passing a finite set of nominal trajectories at a smaller buffer also does not calibrate navigation or timing uncertainty, so the original 8 s model is retained.
+
+The 12 s setting also has 4.45\% lower mean weighted delay than the 8 s reference, despite its stricter reservations. All 30 of those selected schedules remain resource-feasible with unchanged trajectories when re-evaluated at 8 s. The improvement therefore reflects how the reservation pattern affects the heuristic's construction and repair, not increased physical capacity. It does not show a monotonic relation between buffer size and attained heuristic delay.
+
+Spreading the same requested times from the 60 s to the 1800 s window reduces mean weighted delay by 77.24\% (204,789.4 to 46,607.7 s), with 30/30 separated schedules. The corresponding mean finite-batch clearance rates are 126.08 and 133.93 flights/h, respectively. These rates depend on both demand timing and service: they are not estimates of maximal sustainable throughput. The long waits partly reflect synthetic arrival compression and reservation restrictions; no real demand regime has been validated.

@@ -1,0 +1,319 @@
+{
+  "scope": "Descriptive actual accepted moves; component counts overlap. These are not independent effects or samples.",
+  "groups": {
+    "single_merge": {
+      "WSR": {
+        "overlapping_counts": {
+          "updates": 9914,
+          "route_index": 495,
+          "layers": 643,
+          "lanes": 390,
+          "speed_mode": 393,
+          "structure_unchanged": 8752,
+          "strict_delay_reduction": 9807
+        },
+        "exact_change_patterns": {
+          "route_index+lanes+speed_mode": 63,
+          "route_index+lanes": 97,
+          "layers": 352,
+          "structure_unchanged": 8752,
+          "lanes": 96,
+          "route_index+layers+lanes": 70,
+          "speed_mode": 146,
+          "route_index+layers": 112,
+          "lanes+speed_mode": 20,
+          "route_index+layers+lanes+speed_mode": 40,
+          "route_index+speed_mode": 57,
+          "layers+speed_mode": 49,
+          "route_index": 40,
+          "layers+lanes+speed_mode": 2,
+          "route_index+layers+speed_mode": 16,
+          "layers+lanes": 2
+        }
+      },
+      "F": {
+        "overlapping_counts": {
+          "updates": 3240,
+          "route_index": 195,
+          "layers": 282,
+          "lanes": 142,
+          "speed_mode": 169,
+          "structure_unchanged": 2765,
+          "strict_delay_reduction": 3202
+        },
+        "exact_change_patterns": {
+          "route_index+layers+lanes": 28,
+          "route_index+layers": 63,
+          "structure_unchanged": 2765,
+          "lanes+speed_mode": 10,
+          "layers": 150,
+          "speed_mode": 58,
+          "lanes": 45,
+          "route_index+lanes": 11,
+          "route_index+layers+lanes+speed_mode": 18,
+          "route_index+speed_mode": 30,
+          "route_index+lanes+speed_mode": 30,
+          "layers+speed_mode": 17,
+          "route_index": 9,
+          "route_index+layers+speed_mode": 6
+        }
+      },
+      "T": {
+        "overlapping_counts": {
+          "updates": 1807,
+          "route_index": 62,
+          "layers": 140,
+          "lanes": 59,
+          "speed_mode": 41,
+          "structure_unchanged": 1615,
+          "strict_delay_reduction": 1791
+        },
+        "exact_change_patterns": {
+          "route_index+layers+lanes": 19,
+          "route_index+layers": 30,
+          "structure_unchanged": 1615,
+          "lanes": 25,
+          "layers": 76,
+          "lanes+speed_mode": 6,
+          "speed_mode": 20,
+          "route_index+layers+lanes+speed_mode": 8,
+          "layers+speed_mode": 3,
+          "route_index+lanes": 1,
+          "route_index+layers+speed_mode": 4
+        }
+      },
+      "D": {
+        "overlapping_counts": {
+          "updates": 8,
+          "route_index": 0,
+          "layers": 0,
+          "lanes": 0,
+          "speed_mode": 8,
+          "structure_unchanged": 0,
+          "strict_delay_reduction": 8
+        },
+        "exact_change_patterns": {
+          "speed_mode": 8
+        }
+      },
+      "ALL": {
+        "overlapping_counts": {},
+        "exact_change_patterns": {}
+      }
+    },
+    "layered20": {
+      "WSR": {
+        "overlapping_counts": {
+          "updates": 1659,
+          "route_index": 151,
+          "layers": 316,
+          "lanes": 0,
+          "speed_mode": 201,
+          "structure_unchanged": 1160,
+          "strict_delay_reduction": 1590
+        },
+        "exact_change_patterns": {
+          "layers": 190,
+          "route_index": 60,
+          "structure_unchanged": 1160,
+          "speed_mode": 103,
+          "layers+speed_mode": 55,
+          "route_index+layers": 48,
+          "route_index+speed_mode": 20,
+          "route_index+layers+speed_mode": 23
+        }
+      },
+      "F": {
+        "overlapping_counts": {
+          "updates": 1411,
+          "route_index": 144,
+          "layers": 195,
+          "lanes": 0,
+          "speed_mode": 151,
+          "structure_unchanged": 1057,
+          "strict_delay_reduction": 1367
+        },
+        "exact_change_patterns": {
+          "layers": 98,
+          "route_index": 65,
+          "layers+speed_mode": 39,
+          "structure_unchanged": 1057,
+          "route_index+layers": 40,
+          "speed_mode": 73,
+          "route_index+speed_mode": 21,
+          "route_index+layers+speed_mode": 18
+        }
+      },
+      "T": {
+        "overlapping_counts": {
+          "updates": 1342,
+          "route_index": 132,
+          "layers": 177,
+          "lanes": 0,
+          "speed_mode": 104,
+          "structure_unchanged": 1047,
+          "strict_delay_reduction": 1298
+        },
+        "exact_change_patterns": {
+          "layers": 95,
+          "route_index": 55,
+          "layers+speed_mode": 26,
+          "structure_unchanged": 1047,
+          "route_index+layers": 41,
+          "route_index+speed_mode": 21,
+          "speed_mode": 42,
+          "route_index+layers+speed_mode": 15
+        }
+      },
+      "D": {
+        "overlapping_counts": {
+          "updates": 1359,
+          "route_index": 148,
+          "layers": 186,
+          "lanes": 0,
+          "speed_mode": 172,
+          "structure_unchanged": 994,
+          "strict_delay_reduction": 1306
+        },
+        "exact_change_patterns": {
+          "layers": 89,
+          "route_index": 63,
+          "layers+speed_mode": 37,
+          "structure_unchanged": 994,
+          "route_index+layers": 41,
+          "speed_mode": 91,
+          "route_index+speed_mode": 25,
+          "route_index+layers+speed_mode": 19
+        }
+      },
+      "ALL": {
+        "overlapping_counts": {
+          "updates": 1342,
+          "route_index": 132,
+          "layers": 177,
+          "lanes": 0,
+          "speed_mode": 104,
+          "structure_unchanged": 1047,
+          "strict_delay_reduction": 1298
+        },
+        "exact_change_patterns": {
+          "layers": 95,
+          "route_index": 55,
+          "layers+speed_mode": 26,
+          "structure_unchanged": 1047,
+          "route_index+layers": 41,
+          "route_index+speed_mode": 21,
+          "speed_mode": 42,
+          "route_index+layers+speed_mode": 15
+        }
+      }
+    },
+    "layered40": {
+      "WSR": {
+        "overlapping_counts": {
+          "updates": 1294,
+          "route_index": 227,
+          "layers": 408,
+          "lanes": 0,
+          "speed_mode": 217,
+          "structure_unchanged": 650,
+          "strict_delay_reduction": 1221
+        },
+        "exact_change_patterns": {
+          "route_index": 89,
+          "layers": 249,
+          "route_index+layers": 89,
+          "structure_unchanged": 650,
+          "layers+speed_mode": 47,
+          "speed_mode": 121,
+          "route_index+layers+speed_mode": 23,
+          "route_index+speed_mode": 26
+        }
+      },
+      "F": {
+        "overlapping_counts": {
+          "updates": 1115,
+          "route_index": 205,
+          "layers": 265,
+          "lanes": 0,
+          "speed_mode": 185,
+          "structure_unchanged": 627,
+          "strict_delay_reduction": 1070
+        },
+        "exact_change_patterns": {
+          "route_index": 91,
+          "layers": 146,
+          "structure_unchanged": 627,
+          "route_index+layers": 66,
+          "speed_mode": 105,
+          "route_index+layers+speed_mode": 21,
+          "layers+speed_mode": 32,
+          "route_index+speed_mode": 27
+        }
+      },
+      "T": {
+        "overlapping_counts": {
+          "updates": 929,
+          "route_index": 185,
+          "layers": 238,
+          "lanes": 0,
+          "speed_mode": 115,
+          "structure_unchanged": 559,
+          "strict_delay_reduction": 891
+        },
+        "exact_change_patterns": {
+          "route_index+layers": 62,
+          "structure_unchanged": 559,
+          "route_index+layers+speed_mode": 27,
+          "layers": 126,
+          "speed_mode": 36,
+          "layers+speed_mode": 23,
+          "route_index": 67,
+          "route_index+speed_mode": 29
+        }
+      },
+      "D": {
+        "overlapping_counts": {
+          "updates": 1170,
+          "route_index": 214,
+          "layers": 257,
+          "lanes": 0,
+          "speed_mode": 202,
+          "structure_unchanged": 680,
+          "strict_delay_reduction": 1122
+        },
+        "exact_change_patterns": {
+          "route_index": 86,
+          "layers": 128,
+          "structure_unchanged": 680,
+          "route_index+layers": 74,
+          "speed_mode": 118,
+          "route_index+layers+speed_mode": 25,
+          "layers+speed_mode": 30,
+          "route_index+speed_mode": 29
+        }
+      },
+      "ALL": {
+        "overlapping_counts": {
+          "updates": 929,
+          "route_index": 185,
+          "layers": 238,
+          "lanes": 0,
+          "speed_mode": 115,
+          "structure_unchanged": 559,
+          "strict_delay_reduction": 891
+        },
+        "exact_change_patterns": {
+          "route_index+layers": 62,
+          "structure_unchanged": 559,
+          "route_index+layers+speed_mode": 27,
+          "layers": 126,
+          "speed_mode": 36,
+          "layers+speed_mode": 23,
+          "route_index": 67,
+          "route_index+speed_mode": 29
+        }
+      }
+    }
+  }
+}

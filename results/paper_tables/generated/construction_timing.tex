@@ -1,0 +1,26 @@
+\begin{table}[!htbp]
+\caption{Updates, stopping and descriptive stage timings. Updates and strict delay reductions are mean counts per scenario. Caps count runs reaching 50 passes. Construction (C) excludes common template preparation; reinsertion (R) includes rebuilding the occupied-resource index. Construction observations are shared within each start, not independent repetitions.}\label{tab:construction-timing}
+\centering\small
+\begin{tabularx}{\textwidth}{l L r r r r r}
+\toprule Network & Start / method & Updates & Delay cuts & Caps & C (s) & R (s)\\\midrule
+Merge & Composite SPC & 0.0 & 0.0 & 0 & 0.187 & 0.020\\
+Merge & Composite UR & 107.0 & 105.9 & 23 & 0.187 & 4.543\\
+Merge & Composite WSR & 123.9 & 122.6 & 23 & 0.187 & 4.463\\
+Merge & Delay-first SPC & 0.0 & 0.0 & 0 & 0.199 & 0.021\\
+Merge & Delay-first UR & 0.0 & 0.0 & 0 & 0.199 & 0.177\\
+Merge & Delay-first WSR & 0.0 & 0.0 & 0 & 0.199 & 0.178\\
+20 nodes & Composite SPC & 0.0 & 0.0 & 0 & 3.215 & 0.067\\
+20 nodes & Composite UR & 74.3 & 71.7 & 0 & 3.215 & 25.950\\
+20 nodes & Composite WSR & 83.0 & 79.5 & 0 & 3.215 & 24.176\\
+20 nodes & Delay-first SPC & 0.0 & 0.0 & 0 & 3.476 & 0.079\\
+20 nodes & Delay-first UR & 0.0 & 0.0 & 0 & 3.476 & 2.128\\
+20 nodes & Delay-first WSR & 0.0 & 0.0 & 0 & 3.476 & 2.104\\
+40 nodes & Composite SPC & 0.0 & 0.0 & 0 & 2.473 & 0.065\\
+40 nodes & Composite UR & 58.8 & 55.9 & 0 & 2.473 & 9.044\\
+40 nodes & Composite WSR & 64.7 & 61.0 & 0 & 2.473 & 8.394\\
+40 nodes & Delay-first SPC & 0.0 & 0.0 & 0 & 2.554 & 0.073\\
+40 nodes & Delay-first UR & 0.0 & 0.0 & 0 & 2.554 & 1.093\\
+40 nodes & Delay-first WSR & 0.0 & 0.0 & 0 & 2.554 & 1.103\\
+\bottomrule
+\end{tabularx}
+\end{table}

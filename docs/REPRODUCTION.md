@@ -28,7 +28,7 @@ The portable runner accepts each scenario's network, n, seed and window. It uses
 
 The quick-start records resource and speed checks. Independent nominal continuous-interval geometry code and tests are included, but the quick-start does not perform the complete formal geometry audit. It also does not regenerate bootstrap summaries or paper figures. Archived analysis/audit helper modules are retained where required by tests; their command-line main functions expect the original full result hierarchy and should not be run on the simplified example outputs.
 
-Full manuscript aggregate reproduction additionally requires the formal raw records, original execution locks, event logs and plotting/replay pipeline. Those large archives are outside this core-code release. This release does not claim to reproduce those aggregates merely because small examples and unit tests pass.
+Release v1.0.0 includes the archived aggregate estimates, scenario-method endpoints and per-flight metrics in `results/`. The result verifier checks file hashes, design coverage, weighted means, flight totals and primary paired effects. Regenerating every bootstrap, event-level diagnostic and figure additionally requires the formal raw records, original execution locks, event logs and plotting/replay pipeline; those large archives remain outside this release.
 
 ## Source selection
 

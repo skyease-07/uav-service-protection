@@ -1,0 +1,198 @@
+{
+  "results/main/analysis.json": {
+    "source": "Drones_Revision_Stage7/results/confirmation_analysis.json",
+    "sha256": "6dd680fc34c62d0775371aa67d1366a382d05afe12b3fa59229b0024f6fa501c"
+  },
+  "results/main/service_flights.csv": {
+    "source": "Drones_Revision_Stage7/results/confirmation_service_flights.csv",
+    "sha256": "656f1bc23e9dc11880d743e6919d0cb1980e132c782214305fbea97cc006bd8e"
+  },
+  "results/main/audit.json": {
+    "source": "Drones_Revision_Stage7/results/confirmation_audit.json",
+    "sha256": "d7cd2baf2b5b046e1abf518517acc9ddb1d5e507d47d53f8f92e3ed5d5039ed5"
+  },
+  "results/construction/analysis.json": {
+    "source": "Drones_Construction_Objective_Control/results/analysis.json",
+    "sha256": "77677c6655d5b71429cc41c7adfa4d15e7e671e9ccefdd63cacd0e4b1f9a0a88"
+  },
+  "results/construction/service_flights.csv": {
+    "source": "Drones_Construction_Objective_Control/results/service_flights.csv",
+    "sha256": "a8e006ba6fea75e238c92eea0dc27e90e02efdeebd1fd8b53b835dd71736db59"
+  },
+  "results/construction/audit.json": {
+    "source": "Drones_Construction_Objective_Control/validation/audit_checks.json",
+    "sha256": "ca32b6671265eac22702f70f9914694d525eef80eaf110cf0a2ab91f367475be"
+  },
+  "results/service/analysis.json": {
+    "source": "Drones_Service_Protection_Split/results/analysis.json",
+    "sha256": "23de7581baafed21987e9cf9bb75a55e827965ce081fbf9e152c5d7141ac792a"
+  },
+  "results/service/service_flights.csv": {
+    "source": "Drones_Service_Protection_Split/results/service_flights.csv",
+    "sha256": "437d36d4d963b3d8a7e0b5efee3da2f6245c16898dcf083d1d3b1ec75d763b51"
+  },
+  "results/service/audit.json": {
+    "source": "Drones_Service_Protection_Split/validation/audit_checks.json",
+    "sha256": "84aac35d4e2007720c46495353785d65b149c14084f5d3e46a33e836cbf073cb"
+  },
+  "results/development/final_analysis.json": {
+    "source": "Drones_Revision_Stage7/results/final_analysis.json",
+    "sha256": "91be13682948cfc47f3be856f7fdccc6e46cccb6e23d0cfb45cc3ce26007e7a9"
+  },
+  "results/development/geometry_capacity_analysis.json": {
+    "source": "Drones_Revision_Stage7/results/geometry_capacity_analysis.json",
+    "sha256": "6dec9d7e370f27ab36fd5d4cf7f8a2e727be4032d8df537e8db4ae67fb1e6b4e"
+  },
+  "results/development/isolated_edge_capacity.json": {
+    "source": "Drones_Revision_Stage7/results/isolated_edge_capacity.json",
+    "sha256": "7593ce4e6b00d720b0d16253bad2ff59ba509c938a3b785cc59b09f078c790ad"
+  },
+  "results/development/lns_analysis.json": {
+    "source": "Drones_Revision_Stage7/results/lns_analysis.json",
+    "sha256": "33929fa314800a359f2d77c14d92250986a06ac1ca762f714857c04dfaa93035"
+  },
+  "results/development/protected_lns_analysis.json": {
+    "source": "Drones_Revision_Stage7/results/protected_lns_analysis.json",
+    "sha256": "e2930332fc3ada9a92c3c35a2f24d41e076754ad9050e013e20afeb858cf40dc"
+  },
+  "results/development/final_replay_equivalence.json": {
+    "source": "Drones_Revision_Stage7/results/final_replay_equivalence.json",
+    "sha256": "e92768806928b896a1338ad0586cc5188fde49694e4c8fd9f8fa020839cbae35"
+  },
+  "results/development/capacity_resource_audit.json": {
+    "source": "Drones_Revision_Stage7/results/capacity_resource_audit.json",
+    "sha256": "0e041041d9ace9643726eb68e38ae4ba733074ed992de23c4d6a4f635480ada8"
+  },
+  "results/development/capacity_geometry_audit.json": {
+    "source": "Drones_Revision_Stage7/results/capacity_geometry_audit.json",
+    "sha256": "1baa6c1155703a1c4515056624f85226e36488876037167a3c5f0170f0111c97"
+  },
+  "results/development/existing_geometry_audit.json": {
+    "source": "Drones_Revision_Stage7/results/existing_geometry_audit.json",
+    "sha256": "fda99f639fb329b3a698956903efcf8b48ab9c98c44b98f9ab14566c697d0885"
+  },
+  "results/development/final_validation.json": {
+    "source": "Drones_Revision_Stage7/results/final_validation.json",
+    "sha256": "60f665962ddc6b6e9fbbf959bd4020ca88c661b99888f714282c064325ec92de"
+  },
+  "results/development/literature_baselines_audit.json": {
+    "source": "Drones_Revision_Stage7/results/literature_baselines_audit.json",
+    "sha256": "4e6be45aae813c7896952319d7b282504112c92d1ed281d1fadc6392edce91be"
+  },
+  "results/development/protected_lns_audit.json": {
+    "source": "Drones_Revision_Stage7/results/protected_lns_audit.json",
+    "sha256": "aeb4bbb787b9d5196e5622bf80c740b7650c9e5e0d9109d55e790e2f76d5b682"
+  },
+  "results/service/accepted_update_changes.json": {
+    "source": "Drones_Service_Protection_Split/validation/accepted_update_changes.json",
+    "sha256": "271201ce4ed7aacd23c04e8907857cabe10f7202263a5986e91a43bf720fa8f4"
+  },
+  "results/service/illustrative_witnesses.json": {
+    "source": "Drones_Service_Protection_Split/validation/illustrative_witnesses.json",
+    "sha256": "c54667c9470a8e2b755f7a467a6235699ce7d0cc1b18f2f27a55874d2ae42e36"
+  },
+  "results/service/merge_initial_mechanism.json": {
+    "source": "Drones_Service_Protection_Split/validation/merge_initial_mechanism.json",
+    "sha256": "3a28c2d2730064f6007b74782d78b43bb1562904adb54b080614b70500adb891"
+  },
+  "results/service/network_geometry_facts.json": {
+    "source": "Drones_Service_Protection_Split/validation/network_geometry_facts.json",
+    "sha256": "f2ed6d0024ee1dfc622549692a0051bcf8c6e32faf3cf14eb35663c0a8298209"
+  },
+  "results/paper_tables/generated/baseline_findings.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/generated/baseline_findings.tex",
+    "sha256": "afcdada2b3ba7cbe1252daa63b1a560122f08d863bf01b4ef3aa7735b753f5f9"
+  },
+  "results/paper_tables/generated/confirmation_lns.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/generated/confirmation_lns.tex",
+    "sha256": "7c28e8c3f4153c3a2681bd5a50d137e8de6c2f28c9b8392fef191e723b58faf1"
+  },
+  "results/paper_tables/generated/confirmation_primary.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/generated/confirmation_primary.tex",
+    "sha256": "0bcfd6074465955fbbc44be2fe42270fbb42aad94c05b1571c98cc2915c25479"
+  },
+  "results/paper_tables/generated/confirmation_transfer.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/generated/confirmation_transfer.tex",
+    "sha256": "3570fe277af9c0e64bdb6807155a65da99839acb9ce1159a43e48651f379343f"
+  },
+  "results/paper_tables/generated/construction_cross_mode.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/generated/construction_cross_mode.tex",
+    "sha256": "c05612a919442a90aff67cb739eb42c140f3d73e2a77f4835045ff90dd83d69a"
+  },
+  "results/paper_tables/generated/construction_main.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/generated/construction_main.tex",
+    "sha256": "9c64b785b68562e081e646f456f64ccec32d64bc4e92801fc77279b271f68bbd"
+  },
+  "results/paper_tables/generated/construction_recovery.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/generated/construction_recovery.tex",
+    "sha256": "65f57a79b2d99b2e06c006b437190a4a2f415a9040ca53c5b298e12428721f28"
+  },
+  "results/paper_tables/generated/construction_service.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/generated/construction_service.tex",
+    "sha256": "d49efefda542d7a41a94c61b04569896934372946ba40f0c2e5cd40e175d5374"
+  },
+  "results/paper_tables/generated/construction_timing.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/generated/construction_timing.tex",
+    "sha256": "8865e13605f208be445319657be26477dccf17cc8c45f599d90c1ce408afa91e"
+  },
+  "results/paper_tables/generated/geometry_capacity_findings.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/generated/geometry_capacity_findings.tex",
+    "sha256": "edcc444567f895e5185c6cd4a0b697f7926e993fb1fb9d9102037d8d1f107d2a"
+  },
+  "results/paper_tables/generated/large_table.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/generated/large_table.tex",
+    "sha256": "7eebd1b1e693f9aaf26442d093fbc50a1040a33c893a030b3e8a1bdf6185650f"
+  },
+  "results/paper_tables/generated/main_tables.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/generated/main_tables.tex",
+    "sha256": "a7e7a2d754934560439754ea294ab1738df8e7069deeba21e790f649de51641e"
+  },
+  "results/paper_tables/generated/protection_findings.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/generated/protection_findings.tex",
+    "sha256": "f8992df5d3f61f99bca38199683b541dd6bfabbd227d8c462f533a75235d1605"
+  },
+  "results/paper_tables/generated/sensitivity_table.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/generated/sensitivity_table.tex",
+    "sha256": "ade7f32bab116d118419ef9fa1f3dfdeb3e6c358dd00146ac65641aa75e6c937"
+  },
+  "results/paper_tables/generated/service_detail.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/generated/service_detail.tex",
+    "sha256": "7731d085fb17335d1bc99276ea720d050bc5ef1d7bda38dfb55312daf4618bd0"
+  },
+  "results/paper_tables/generated/service_findings.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/generated/service_findings.tex",
+    "sha256": "3db38265c0e50bd797e5df19b21ab589f47dd7e5d9396237455deb4e59cff987"
+  },
+  "results/paper_tables/generated/service_split_main.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/generated/service_split_main.tex",
+    "sha256": "f3fefc5301fd9677284e48ff63e0970f5d461cf561e387608d000d677db32fb1"
+  },
+  "results/paper_tables/generated/service_split_masks.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/generated/service_split_masks.tex",
+    "sha256": "f7162b6029f3d7d1e8332b3a2998287e0cac86cee6cc909d2346ee4ba060324f"
+  },
+  "results/paper_tables/generated/service_split_rates.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/generated/service_split_rates.tex",
+    "sha256": "520387214549e418aff8249bf615842991f13606d25a7c80345f5e06479165ba"
+  },
+  "results/paper_tables/generated/service_split_recovery.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/generated/service_split_recovery.tex",
+    "sha256": "242e5382b1ac1cf779a73c7e485589a504b225d7222895a639b80af3fbfed141"
+  },
+  "results/paper_tables/generated/service_split_rejections.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/generated/service_split_rejections.tex",
+    "sha256": "c622f28ba71f8572a2e3fc8929c394f5af05556c4185672eeb3337f4e348ad22"
+  },
+  "results/paper_tables/generated/service_split_services.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/generated/service_split_services.tex",
+    "sha256": "380272ad28a31f33f58cb317960507d5f610f7bc1a65307016be4776a77201be"
+  },
+  "results/paper_tables/generated/service_split_timing.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/generated/service_split_timing.tex",
+    "sha256": "8648ba5f7141aff80d8b473a73a49c5b8390a0cec173a0661471d8dd4236956c"
+  },
+  "results/paper_tables/sections/confirmation_lns_table.tex": {
+    "source": "Drones_Revision_Expansion/step29_selected_wording_revision_20261108/sections/confirmation_lns_table.tex",
+    "sha256": "d0423ff6271ef0c7f0ab09b5ae7f1894a24dc407f7ab1581311751ec6a964a4e"
+  }
+}

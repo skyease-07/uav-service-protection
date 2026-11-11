@@ -1,0 +1,212 @@
+{
+  "layered20": {
+    "flights_checked": 4000,
+    "routes_checked": 9694,
+    "horizontal_length_invariant_across_routes": true,
+    "formula_m": "1600+100*k; k=(destination_y-origin_y)/300",
+    "qualification": "Four longitudinal steps; same lateral count, straight single-lane edges. D reduces to vertical-distance protection in this candidate set.",
+    "duration_bounds": {
+      "rescue": {
+        "max_metering_penalty_sec": 10.0,
+        "one_transition_sec": 34.0
+      },
+      "cargo": {
+        "max_metering_penalty_sec": 10.0,
+        "one_transition_sec": 40.0
+      },
+      "inspection": {
+        "max_metering_penalty_sec": 10.0,
+        "one_transition_sec": 50.0
+      }
+    },
+    "T_implies_vertical_protection": true,
+    "T_ALL_exact_parity": [
+      {
+        "seed": 21000,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 21001,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 21002,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 21003,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 21004,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 21005,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 21006,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 21007,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 21008,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 21009,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 21010,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 21011,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 21012,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 21013,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 21014,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 21015,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 21016,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 21017,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 21018,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 21019,
+        "final_and_update_sequence_equal": true
+      }
+    ],
+    "derivation": "For a fixed request, horizontal duration at nominal speed depends only on the fixed counts of 400/500 m edges. Upstream metering changes that duration by at most 10 s. Any additional 100 m vertical transition costs at least 34 s. Non-increasing T therefore prohibits increasing transition count/Z; H is invariant and F follows from protected d+T. This is a post-hoc deduction from the locked finite model, not a new operational claim."
+  },
+  "layered40": {
+    "flights_checked": 4000,
+    "routes_checked": 10363,
+    "horizontal_length_invariant_across_routes": true,
+    "formula_m": "1600+100*k; k=(destination_y-origin_y)/300",
+    "qualification": "Four longitudinal steps; same lateral count, straight single-lane edges. D reduces to vertical-distance protection in this candidate set.",
+    "duration_bounds": {
+      "rescue": {
+        "max_metering_penalty_sec": 10.0,
+        "one_transition_sec": 34.0
+      },
+      "cargo": {
+        "max_metering_penalty_sec": 10.0,
+        "one_transition_sec": 40.0
+      },
+      "inspection": {
+        "max_metering_penalty_sec": 10.0,
+        "one_transition_sec": 50.0
+      }
+    },
+    "T_implies_vertical_protection": true,
+    "T_ALL_exact_parity": [
+      {
+        "seed": 22000,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 22001,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 22002,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 22003,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 22004,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 22005,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 22006,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 22007,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 22008,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 22009,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 22010,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 22011,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 22012,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 22013,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 22014,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 22015,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 22016,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 22017,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 22018,
+        "final_and_update_sequence_equal": true
+      },
+      {
+        "seed": 22019,
+        "final_and_update_sequence_equal": true
+      }
+    ],
+    "derivation": "For a fixed request, horizontal duration at nominal speed depends only on the fixed counts of 400/500 m edges. Upstream metering changes that duration by at most 10 s. Any additional 100 m vertical transition costs at least 34 s. Non-increasing T therefore prohibits increasing transition count/Z; H is invariant and F follows from protected d+T. This is a post-hoc deduction from the locked finite model, not a new operational claim."
+  }
+}

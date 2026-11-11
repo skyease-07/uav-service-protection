@@ -1,0 +1,655 @@
+{
+  "passed": true,
+  "records": 18,
+  "rows": [
+    {
+      "type": "rescue",
+      "buffer_sec": 4,
+      "mode": "whole_edge",
+      "length_m": 600.0,
+      "duration_sec": 46.0,
+      "speed_mps": 13.043478260869565,
+      "separation_headway_sec": 1.5333333333333334,
+      "node_headway_sec": 8,
+      "used_grid_headway_sec": 48.0,
+      "periodic_rate_per_hour": 75.0,
+      "batch_clearance_sec": 2398.0,
+      "simultaneous_same_lane_flights": 1,
+      "motion_signature": "7bac59636a3a4802317c7b71686606f2a2bd38380df51b62d637c998d70930fc",
+      "audit": {
+        "status": "separated",
+        "counts": {},
+        "categories": {},
+        "violating_pairs": 0,
+        "unresolved_pairs": 0,
+        "witnesses": [],
+        "unresolved": [],
+        "settings": {
+          "guard": 1e-06,
+          "min_interval": 1e-06,
+          "max_depth": 30,
+          "max_cells": 100000
+        },
+        "interpretation": "Nominal continuous-interval numerical audit with analytic bounds and explicit guard; not flight certification or directed-rounding proof."
+      }
+    },
+    {
+      "type": "rescue",
+      "buffer_sec": 4,
+      "mode": "following",
+      "length_m": 600.0,
+      "duration_sec": 46.0,
+      "speed_mps": 13.043478260869565,
+      "separation_headway_sec": 1.5333333333333334,
+      "node_headway_sec": 8,
+      "used_grid_headway_sec": 8.0,
+      "periodic_rate_per_hour": 450.0,
+      "batch_clearance_sec": 438.0,
+      "simultaneous_same_lane_flights": 6,
+      "motion_signature": "0d591c6334559a9ef8a456b2fa5a55c3c32fb799867d64156d4b4c205d5dcff3",
+      "audit": {
+        "status": "separated",
+        "counts": {
+          "overlapping_flight_pairs": 235,
+          "segment_pairs": 235,
+          "affine_pairs": 235,
+          "cells": 235,
+          "subdivisions": 0,
+          "leaves": 235
+        },
+        "categories": {
+          "same_edge": 235
+        },
+        "violating_pairs": 0,
+        "unresolved_pairs": 0,
+        "witnesses": [],
+        "unresolved": [],
+        "settings": {
+          "guard": 1e-06,
+          "min_interval": 1e-06,
+          "max_depth": 30,
+          "max_cells": 100000
+        },
+        "interpretation": "Nominal continuous-interval numerical audit with analytic bounds and explicit guard; not flight certification or directed-rounding proof."
+      }
+    },
+    {
+      "type": "rescue",
+      "buffer_sec": 8,
+      "mode": "whole_edge",
+      "length_m": 600.0,
+      "duration_sec": 46.0,
+      "speed_mps": 13.043478260869565,
+      "separation_headway_sec": 1.5333333333333334,
+      "node_headway_sec": 16,
+      "used_grid_headway_sec": 48.0,
+      "periodic_rate_per_hour": 75.0,
+      "batch_clearance_sec": 2398.0,
+      "simultaneous_same_lane_flights": 1,
+      "motion_signature": "7bac59636a3a4802317c7b71686606f2a2bd38380df51b62d637c998d70930fc",
+      "audit": {
+        "status": "separated",
+        "counts": {},
+        "categories": {},
+        "violating_pairs": 0,
+        "unresolved_pairs": 0,
+        "witnesses": [],
+        "unresolved": [],
+        "settings": {
+          "guard": 1e-06,
+          "min_interval": 1e-06,
+          "max_depth": 30,
+          "max_cells": 100000
+        },
+        "interpretation": "Nominal continuous-interval numerical audit with analytic bounds and explicit guard; not flight certification or directed-rounding proof."
+      }
+    },
+    {
+      "type": "rescue",
+      "buffer_sec": 8,
+      "mode": "following",
+      "length_m": 600.0,
+      "duration_sec": 46.0,
+      "speed_mps": 13.043478260869565,
+      "separation_headway_sec": 1.5333333333333334,
+      "node_headway_sec": 16,
+      "used_grid_headway_sec": 16.0,
+      "periodic_rate_per_hour": 225.0,
+      "batch_clearance_sec": 830.0,
+      "simultaneous_same_lane_flights": 3,
+      "motion_signature": "7dc73342f7b8419dfc00c5caa2181f749932f0e5b497f0e9bf3cf1d2ac8bbaf6",
+      "audit": {
+        "status": "separated",
+        "counts": {
+          "overlapping_flight_pairs": 97,
+          "segment_pairs": 97,
+          "affine_pairs": 97,
+          "cells": 97,
+          "subdivisions": 0,
+          "leaves": 97
+        },
+        "categories": {
+          "same_edge": 97
+        },
+        "violating_pairs": 0,
+        "unresolved_pairs": 0,
+        "witnesses": [],
+        "unresolved": [],
+        "settings": {
+          "guard": 1e-06,
+          "min_interval": 1e-06,
+          "max_depth": 30,
+          "max_cells": 100000
+        },
+        "interpretation": "Nominal continuous-interval numerical audit with analytic bounds and explicit guard; not flight certification or directed-rounding proof."
+      }
+    },
+    {
+      "type": "rescue",
+      "buffer_sec": 12,
+      "mode": "whole_edge",
+      "length_m": 600.0,
+      "duration_sec": 46.0,
+      "speed_mps": 13.043478260869565,
+      "separation_headway_sec": 1.5333333333333334,
+      "node_headway_sec": 24,
+      "used_grid_headway_sec": 48.0,
+      "periodic_rate_per_hour": 75.0,
+      "batch_clearance_sec": 2398.0,
+      "simultaneous_same_lane_flights": 1,
+      "motion_signature": "7bac59636a3a4802317c7b71686606f2a2bd38380df51b62d637c998d70930fc",
+      "audit": {
+        "status": "separated",
+        "counts": {},
+        "categories": {},
+        "violating_pairs": 0,
+        "unresolved_pairs": 0,
+        "witnesses": [],
+        "unresolved": [],
+        "settings": {
+          "guard": 1e-06,
+          "min_interval": 1e-06,
+          "max_depth": 30,
+          "max_cells": 100000
+        },
+        "interpretation": "Nominal continuous-interval numerical audit with analytic bounds and explicit guard; not flight certification or directed-rounding proof."
+      }
+    },
+    {
+      "type": "rescue",
+      "buffer_sec": 12,
+      "mode": "following",
+      "length_m": 600.0,
+      "duration_sec": 46.0,
+      "speed_mps": 13.043478260869565,
+      "separation_headway_sec": 1.5333333333333334,
+      "node_headway_sec": 24,
+      "used_grid_headway_sec": 24.0,
+      "periodic_rate_per_hour": 150.0,
+      "batch_clearance_sec": 1222.0,
+      "simultaneous_same_lane_flights": 2,
+      "motion_signature": "2811457dd5c808aba62e30ba66d6a63bff708287bb82f81cfd2865667baa3b96",
+      "audit": {
+        "status": "separated",
+        "counts": {
+          "overlapping_flight_pairs": 49,
+          "segment_pairs": 49,
+          "affine_pairs": 49,
+          "cells": 49,
+          "subdivisions": 0,
+          "leaves": 49
+        },
+        "categories": {
+          "same_edge": 49
+        },
+        "violating_pairs": 0,
+        "unresolved_pairs": 0,
+        "witnesses": [],
+        "unresolved": [],
+        "settings": {
+          "guard": 1e-06,
+          "min_interval": 1e-06,
+          "max_depth": 30,
+          "max_cells": 100000
+        },
+        "interpretation": "Nominal continuous-interval numerical audit with analytic bounds and explicit guard; not flight certification or directed-rounding proof."
+      }
+    },
+    {
+      "type": "cargo",
+      "buffer_sec": 4,
+      "mode": "whole_edge",
+      "length_m": 600.0,
+      "duration_sec": 54.0,
+      "speed_mps": 11.11111111111111,
+      "separation_headway_sec": 2.25,
+      "node_headway_sec": 8,
+      "used_grid_headway_sec": 56.0,
+      "periodic_rate_per_hour": 64.28571428571429,
+      "batch_clearance_sec": 2798.0,
+      "simultaneous_same_lane_flights": 1,
+      "motion_signature": "4ccd90768d5f62b1cc361fb3887c5a2f6f74f6375abf583f4141e1cdfa5a3e16",
+      "audit": {
+        "status": "separated",
+        "counts": {},
+        "categories": {},
+        "violating_pairs": 0,
+        "unresolved_pairs": 0,
+        "witnesses": [],
+        "unresolved": [],
+        "settings": {
+          "guard": 1e-06,
+          "min_interval": 1e-06,
+          "max_depth": 30,
+          "max_cells": 100000
+        },
+        "interpretation": "Nominal continuous-interval numerical audit with analytic bounds and explicit guard; not flight certification or directed-rounding proof."
+      }
+    },
+    {
+      "type": "cargo",
+      "buffer_sec": 4,
+      "mode": "following",
+      "length_m": 600.0,
+      "duration_sec": 54.0,
+      "speed_mps": 11.11111111111111,
+      "separation_headway_sec": 2.25,
+      "node_headway_sec": 8,
+      "used_grid_headway_sec": 8.0,
+      "periodic_rate_per_hour": 450.0,
+      "batch_clearance_sec": 446.0,
+      "simultaneous_same_lane_flights": 7,
+      "motion_signature": "cd1e8db99339fc957d1a503a43866f79910f45e3b72bded774622fb65ae52f82",
+      "audit": {
+        "status": "separated",
+        "counts": {
+          "overlapping_flight_pairs": 279,
+          "segment_pairs": 279,
+          "affine_pairs": 279,
+          "cells": 279,
+          "subdivisions": 0,
+          "leaves": 279
+        },
+        "categories": {
+          "same_edge": 279
+        },
+        "violating_pairs": 0,
+        "unresolved_pairs": 0,
+        "witnesses": [],
+        "unresolved": [],
+        "settings": {
+          "guard": 1e-06,
+          "min_interval": 1e-06,
+          "max_depth": 30,
+          "max_cells": 100000
+        },
+        "interpretation": "Nominal continuous-interval numerical audit with analytic bounds and explicit guard; not flight certification or directed-rounding proof."
+      }
+    },
+    {
+      "type": "cargo",
+      "buffer_sec": 8,
+      "mode": "whole_edge",
+      "length_m": 600.0,
+      "duration_sec": 54.0,
+      "speed_mps": 11.11111111111111,
+      "separation_headway_sec": 2.25,
+      "node_headway_sec": 16,
+      "used_grid_headway_sec": 56.0,
+      "periodic_rate_per_hour": 64.28571428571429,
+      "batch_clearance_sec": 2798.0,
+      "simultaneous_same_lane_flights": 1,
+      "motion_signature": "4ccd90768d5f62b1cc361fb3887c5a2f6f74f6375abf583f4141e1cdfa5a3e16",
+      "audit": {
+        "status": "separated",
+        "counts": {},
+        "categories": {},
+        "violating_pairs": 0,
+        "unresolved_pairs": 0,
+        "witnesses": [],
+        "unresolved": [],
+        "settings": {
+          "guard": 1e-06,
+          "min_interval": 1e-06,
+          "max_depth": 30,
+          "max_cells": 100000
+        },
+        "interpretation": "Nominal continuous-interval numerical audit with analytic bounds and explicit guard; not flight certification or directed-rounding proof."
+      }
+    },
+    {
+      "type": "cargo",
+      "buffer_sec": 8,
+      "mode": "following",
+      "length_m": 600.0,
+      "duration_sec": 54.0,
+      "speed_mps": 11.11111111111111,
+      "separation_headway_sec": 2.25,
+      "node_headway_sec": 16,
+      "used_grid_headway_sec": 16.0,
+      "periodic_rate_per_hour": 225.0,
+      "batch_clearance_sec": 838.0,
+      "simultaneous_same_lane_flights": 4,
+      "motion_signature": "9302908238060bfe12330350cf6a5fae4f55baae1afc029491abf40089c8c0ce",
+      "audit": {
+        "status": "separated",
+        "counts": {
+          "overlapping_flight_pairs": 144,
+          "segment_pairs": 144,
+          "affine_pairs": 144,
+          "cells": 144,
+          "subdivisions": 0,
+          "leaves": 144
+        },
+        "categories": {
+          "same_edge": 144
+        },
+        "violating_pairs": 0,
+        "unresolved_pairs": 0,
+        "witnesses": [],
+        "unresolved": [],
+        "settings": {
+          "guard": 1e-06,
+          "min_interval": 1e-06,
+          "max_depth": 30,
+          "max_cells": 100000
+        },
+        "interpretation": "Nominal continuous-interval numerical audit with analytic bounds and explicit guard; not flight certification or directed-rounding proof."
+      }
+    },
+    {
+      "type": "cargo",
+      "buffer_sec": 12,
+      "mode": "whole_edge",
+      "length_m": 600.0,
+      "duration_sec": 54.0,
+      "speed_mps": 11.11111111111111,
+      "separation_headway_sec": 2.25,
+      "node_headway_sec": 24,
+      "used_grid_headway_sec": 56.0,
+      "periodic_rate_per_hour": 64.28571428571429,
+      "batch_clearance_sec": 2798.0,
+      "simultaneous_same_lane_flights": 1,
+      "motion_signature": "4ccd90768d5f62b1cc361fb3887c5a2f6f74f6375abf583f4141e1cdfa5a3e16",
+      "audit": {
+        "status": "separated",
+        "counts": {},
+        "categories": {},
+        "violating_pairs": 0,
+        "unresolved_pairs": 0,
+        "witnesses": [],
+        "unresolved": [],
+        "settings": {
+          "guard": 1e-06,
+          "min_interval": 1e-06,
+          "max_depth": 30,
+          "max_cells": 100000
+        },
+        "interpretation": "Nominal continuous-interval numerical audit with analytic bounds and explicit guard; not flight certification or directed-rounding proof."
+      }
+    },
+    {
+      "type": "cargo",
+      "buffer_sec": 12,
+      "mode": "following",
+      "length_m": 600.0,
+      "duration_sec": 54.0,
+      "speed_mps": 11.11111111111111,
+      "separation_headway_sec": 2.25,
+      "node_headway_sec": 24,
+      "used_grid_headway_sec": 24.0,
+      "periodic_rate_per_hour": 150.0,
+      "batch_clearance_sec": 1230.0,
+      "simultaneous_same_lane_flights": 3,
+      "motion_signature": "a91a90466bd1e4f8be16fb26e460f37ff547b25735b829e1c1abab4bdc5172d7",
+      "audit": {
+        "status": "separated",
+        "counts": {
+          "overlapping_flight_pairs": 97,
+          "segment_pairs": 97,
+          "affine_pairs": 97,
+          "cells": 97,
+          "subdivisions": 0,
+          "leaves": 97
+        },
+        "categories": {
+          "same_edge": 97
+        },
+        "violating_pairs": 0,
+        "unresolved_pairs": 0,
+        "witnesses": [],
+        "unresolved": [],
+        "settings": {
+          "guard": 1e-06,
+          "min_interval": 1e-06,
+          "max_depth": 30,
+          "max_cells": 100000
+        },
+        "interpretation": "Nominal continuous-interval numerical audit with analytic bounds and explicit guard; not flight certification or directed-rounding proof."
+      }
+    },
+    {
+      "type": "inspection",
+      "buffer_sec": 4,
+      "mode": "whole_edge",
+      "length_m": 600.0,
+      "duration_sec": 60.0,
+      "speed_mps": 10.0,
+      "separation_headway_sec": 2.0,
+      "node_headway_sec": 8,
+      "used_grid_headway_sec": 62.0,
+      "periodic_rate_per_hour": 58.064516129032256,
+      "batch_clearance_sec": 3098.0,
+      "simultaneous_same_lane_flights": 1,
+      "motion_signature": "c8f45f6bc2e004cddce11c5d535d8714b7362eac50e2c1be3d8d25eb25ee9f0a",
+      "audit": {
+        "status": "separated",
+        "counts": {},
+        "categories": {},
+        "violating_pairs": 0,
+        "unresolved_pairs": 0,
+        "witnesses": [],
+        "unresolved": [],
+        "settings": {
+          "guard": 1e-06,
+          "min_interval": 1e-06,
+          "max_depth": 30,
+          "max_cells": 100000
+        },
+        "interpretation": "Nominal continuous-interval numerical audit with analytic bounds and explicit guard; not flight certification or directed-rounding proof."
+      }
+    },
+    {
+      "type": "inspection",
+      "buffer_sec": 4,
+      "mode": "following",
+      "length_m": 600.0,
+      "duration_sec": 60.0,
+      "speed_mps": 10.0,
+      "separation_headway_sec": 2.0,
+      "node_headway_sec": 8,
+      "used_grid_headway_sec": 8.0,
+      "periodic_rate_per_hour": 450.0,
+      "batch_clearance_sec": 452.0,
+      "simultaneous_same_lane_flights": 8,
+      "motion_signature": "e584520f3170747fe3bf33b9ab4b2cd1b233ac9dba6157990ff4cb36284d4038",
+      "audit": {
+        "status": "separated",
+        "counts": {
+          "overlapping_flight_pairs": 322,
+          "segment_pairs": 322,
+          "affine_pairs": 322,
+          "cells": 322,
+          "subdivisions": 0,
+          "leaves": 322
+        },
+        "categories": {
+          "same_edge": 322
+        },
+        "violating_pairs": 0,
+        "unresolved_pairs": 0,
+        "witnesses": [],
+        "unresolved": [],
+        "settings": {
+          "guard": 1e-06,
+          "min_interval": 1e-06,
+          "max_depth": 30,
+          "max_cells": 100000
+        },
+        "interpretation": "Nominal continuous-interval numerical audit with analytic bounds and explicit guard; not flight certification or directed-rounding proof."
+      }
+    },
+    {
+      "type": "inspection",
+      "buffer_sec": 8,
+      "mode": "whole_edge",
+      "length_m": 600.0,
+      "duration_sec": 60.0,
+      "speed_mps": 10.0,
+      "separation_headway_sec": 2.0,
+      "node_headway_sec": 16,
+      "used_grid_headway_sec": 62.0,
+      "periodic_rate_per_hour": 58.064516129032256,
+      "batch_clearance_sec": 3098.0,
+      "simultaneous_same_lane_flights": 1,
+      "motion_signature": "c8f45f6bc2e004cddce11c5d535d8714b7362eac50e2c1be3d8d25eb25ee9f0a",
+      "audit": {
+        "status": "separated",
+        "counts": {},
+        "categories": {},
+        "violating_pairs": 0,
+        "unresolved_pairs": 0,
+        "witnesses": [],
+        "unresolved": [],
+        "settings": {
+          "guard": 1e-06,
+          "min_interval": 1e-06,
+          "max_depth": 30,
+          "max_cells": 100000
+        },
+        "interpretation": "Nominal continuous-interval numerical audit with analytic bounds and explicit guard; not flight certification or directed-rounding proof."
+      }
+    },
+    {
+      "type": "inspection",
+      "buffer_sec": 8,
+      "mode": "following",
+      "length_m": 600.0,
+      "duration_sec": 60.0,
+      "speed_mps": 10.0,
+      "separation_headway_sec": 2.0,
+      "node_headway_sec": 16,
+      "used_grid_headway_sec": 16.0,
+      "periodic_rate_per_hour": 225.0,
+      "batch_clearance_sec": 844.0,
+      "simultaneous_same_lane_flights": 4,
+      "motion_signature": "e59ef72198688e1e4a26800163a6b85a8fea4f1b68586af886968eff3a9c41fa",
+      "audit": {
+        "status": "separated",
+        "counts": {
+          "overlapping_flight_pairs": 144,
+          "segment_pairs": 144,
+          "affine_pairs": 144,
+          "cells": 144,
+          "subdivisions": 0,
+          "leaves": 144
+        },
+        "categories": {
+          "same_edge": 144
+        },
+        "violating_pairs": 0,
+        "unresolved_pairs": 0,
+        "witnesses": [],
+        "unresolved": [],
+        "settings": {
+          "guard": 1e-06,
+          "min_interval": 1e-06,
+          "max_depth": 30,
+          "max_cells": 100000
+        },
+        "interpretation": "Nominal continuous-interval numerical audit with analytic bounds and explicit guard; not flight certification or directed-rounding proof."
+      }
+    },
+    {
+      "type": "inspection",
+      "buffer_sec": 12,
+      "mode": "whole_edge",
+      "length_m": 600.0,
+      "duration_sec": 60.0,
+      "speed_mps": 10.0,
+      "separation_headway_sec": 2.0,
+      "node_headway_sec": 24,
+      "used_grid_headway_sec": 62.0,
+      "periodic_rate_per_hour": 58.064516129032256,
+      "batch_clearance_sec": 3098.0,
+      "simultaneous_same_lane_flights": 1,
+      "motion_signature": "c8f45f6bc2e004cddce11c5d535d8714b7362eac50e2c1be3d8d25eb25ee9f0a",
+      "audit": {
+        "status": "separated",
+        "counts": {},
+        "categories": {},
+        "violating_pairs": 0,
+        "unresolved_pairs": 0,
+        "witnesses": [],
+        "unresolved": [],
+        "settings": {
+          "guard": 1e-06,
+          "min_interval": 1e-06,
+          "max_depth": 30,
+          "max_cells": 100000
+        },
+        "interpretation": "Nominal continuous-interval numerical audit with analytic bounds and explicit guard; not flight certification or directed-rounding proof."
+      }
+    },
+    {
+      "type": "inspection",
+      "buffer_sec": 12,
+      "mode": "following",
+      "length_m": 600.0,
+      "duration_sec": 60.0,
+      "speed_mps": 10.0,
+      "separation_headway_sec": 2.0,
+      "node_headway_sec": 24,
+      "used_grid_headway_sec": 24.0,
+      "periodic_rate_per_hour": 150.0,
+      "batch_clearance_sec": 1236.0,
+      "simultaneous_same_lane_flights": 3,
+      "motion_signature": "b3c2c427ea9393766ed05385629bc604c05e951c5244b1e70c252cf64d5a1049",
+      "audit": {
+        "status": "separated",
+        "counts": {
+          "overlapping_flight_pairs": 97,
+          "segment_pairs": 97,
+          "affine_pairs": 97,
+          "cells": 97,
+          "subdivisions": 0,
+          "leaves": 97
+        },
+        "categories": {
+          "same_edge": 97
+        },
+        "violating_pairs": 0,
+        "unresolved_pairs": 0,
+        "witnesses": [],
+        "unresolved": [],
+        "settings": {
+          "guard": 1e-06,
+          "min_interval": 1e-06,
+          "max_depth": 30,
+          "max_cells": 100000
+        },
+        "interpretation": "Nominal continuous-interval numerical audit with analytic bounds and explicit guard; not flight certification or directed-rounding proof."
+      }
+    }
+  ],
+  "protocol_sha256": "5896385404d1aa0356aa8e829fcdf87fb6f5eeacb265cf5784592acae634a9b5",
+  "source_hashes": {
+    "independent_geometry.py": "51b0f63a0ca62ae877facdf57371cf46772c9b3ada7cc38477162367fe2d625f",
+    "isolated_edge_capacity.py": "737f34e07a08cf3f508edae702df564378963f38cd999d7db534b610d5ad62b7"
+  },
+  "input_hashes": {
+    "network.json": "6a855dc59cc20c944b4747309c049cc09e04b54c862994cc407a3ea98ae27733",
+    "types.json": "89941fb738716678ee04c488e92d769100e69cfc988de8435050f65624c7d32f"
+  },
+  "interpretation": "Single lane, equal speeds, periodic grid packing, retained node spacing; not network throughput or a heterogeneous following scheduler."
+}

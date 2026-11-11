@@ -1,0 +1,14 @@
+\begin{table}[!htbp]
+\caption{Fixed-work literature follow-up on the first 30 prespecified held-out main scenarios (3000 flights per method). Both LNS modes use 1000 random group attempts, size eight, the same SPC start and random-neighborhood stream. All satisfy initial SPC delay bounds. Completion increases are relative to SPC; reversals count individual delay increases within accepted search updates. Values are descriptive and timing is contemporaneous, not an equal-budget ranking.}\label{tab:confirmation-lns}
+\centering\small
+\begin{tabularx}{\textwidth}{L R R R R}
+\toprule
+Method & Weighted (s) & Runtime (s) & Later flights & Reversals \\
+\midrule
+SPC-WSR & 206,278.2 & 3.83 & 52 & 0 \\
+LNS-I & 203,079.2 & 5.97 & 13 & 44 \\
+LNS-M & 205,260.1 & 5.90 & 8 & 0 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+LNS-I has 1.352 pp mean paired reduction relative to WSR (pointwise bootstrap interval [-0.122, 3.049] pp), with 16/0/14 improved/tied/worse scenarios. At the contemporaneous WSR completion time, 30/30 LNS runs have completed initialization; their conditional mean weighted delay is 207,098.1 s versus 206,278.2 s for the corresponding WSR runs. LNS-M has 0.340 pp mean paired reduction relative to WSR (pointwise bootstrap interval [-0.850, 1.637] pp), with 12/0/18 improved/tied/worse scenarios. At the contemporaneous WSR completion time, 29/30 LNS runs have completed initialization; their conditional mean weighted delay is 207,994.9 s versus 205,897.1 s for the corresponding WSR runs. The full 1000-attempt endpoints are the fixed-work comparison; the timing view reports initialization coverage and retains its conditional interpretation. It cannot identify a universal winner or the optimal cost of the protection rule.

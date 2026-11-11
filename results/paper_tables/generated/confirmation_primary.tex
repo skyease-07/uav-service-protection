@@ -1,0 +1,28 @@
+\begin{table}[!htbp]
+\caption{Prospectively locked held-out primary contrasts, 80 paired scenarios. Gain is the mean of scenario-relative weighted-delay reductions in percentage points (pp), positive in favor of WSR. Tests are one-sided against the stated margin, with Holm adjustment over two hypotheses. CI is a pointwise 95\% t interval; LB is a simultaneous Bonferroni one-sided lower bound. CI estimates the effect-size interval; LB corresponds to the prespecified one-sided hypothesis assessment.}\label{tab:confirmation}
+\centering\small
+\begin{tabularx}{\textwidth}{L R R L R R}
+\toprule
+Contrast & Margin & Gain (pp) & CI (pp) & LB (pp) & Holm p \\
+\midrule
+H1: SPC & 1.0 & 3.335 & [2.577, 4.093] & 2.577 & 3.208e-08 \\
+H2: SPC-UR & 0.0 & 0.751 & [0.343, 1.158] & 0.343 & 0.0002215 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+\begin{table}[!htbp]
+\caption{Held-out main outcomes: 80 scenarios, 100 requests in 60 s. WSR-S adds simultaneous per-update service guards. Means are across scenarios. Runtime includes instrumented solving and reservation/speed checks, excluding disk I/O and subsequent independent geometry. Method-specific budgets are defined in Section~\ref{sec:confirmation-method}. Cap counts 50-pass terminations.}\label{tab:confirmation-main}
+\centering\small
+\begin{tabularx}{\textwidth}{L R R R R}
+\toprule
+Method & Weighted (s) & Total (s) & Runtime (s) & Cap \\
+\midrule
+SPC & 211,465.1 & 138,016.5 & 0.37 & 0 \\
+SPC-UR & 206,038.2 & 132,968.5 & 4.76 & 23 \\
+SPC-WSR & 204,511.5 & 132,622.6 & 4.76 & 23 \\
+WSR-S & 211,465.1 & 138,016.5 & 0.51 & 0 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+Both hypotheses pass the Holm-adjusted 0.05 rule (Table~\ref{tab:confirmation}). The weighting lower bound of 0.343 pp remains below the descriptive 0.5 pp planning reference. Scenario-bootstrap 95\% intervals are [2.607, 4.099] pp for recovery and [0.370, 1.173] pp for weighting; they provide robustness checks under the unchanged decision rule. Improved/tied/worse counts are 75/5/0 against SPC and 38/32/10 against UR. Audit outcomes are consolidated in Section~\ref{sec:geometry-results}.
+

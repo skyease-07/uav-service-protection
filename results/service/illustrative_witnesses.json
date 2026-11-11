@@ -1,0 +1,127 @@
+{
+  "selection": "Additional post-hoc illustrations: first seed/visit/template in exact masks 4 and 3 on the unchanged merge ALL trajectory; not representative-effect estimates. Per-bit witnesses prespecified in the protocol remain in each mechanism.json.",
+  "witnesses": {
+    "4": {
+      "seed": 20002,
+      "visit": 67,
+      "pass": 1,
+      "before": {
+        "id": "F100",
+        "priority": 2,
+        "delay_sec": 624.0,
+        "finish_sec": 787.0,
+        "route_index": 0,
+        "layers": [
+          1,
+          2
+        ],
+        "lanes": [
+          0,
+          0
+        ],
+        "speed_mode": "metered",
+        "structural_cost": 19.0,
+        "airborne_sec": 120.0
+      },
+      "after": {
+        "id": "F100",
+        "priority": 2,
+        "delay_sec": 618.0,
+        "finish_sec": 767.0,
+        "route_index": 1,
+        "layers": [
+          1,
+          1
+        ],
+        "lanes": [
+          0,
+          1
+        ],
+        "speed_mode": "metered",
+        "structural_cost": 33.0,
+        "airborne_sec": 106.0
+      },
+      "candidate": {
+        "template": 11,
+        "step": 309,
+        "mask": 4,
+        "delta": [
+          -20.0,
+          -14.0,
+          87.59177426189376,
+          -100.0
+        ],
+        "delay_delta": -6.0,
+        "changes": [
+          true,
+          true,
+          true,
+          false
+        ]
+      },
+      "source": "results/single_merge/seed20002/ALL/events.jsonl.gz",
+      "source_sha256": "15b6813eaf2af4ea77d1533f1ab980891ddebb7b2b45124df424912298333d8b"
+    },
+    "3": {
+      "seed": 20003,
+      "visit": 87,
+      "pass": 1,
+      "before": {
+        "id": "F089",
+        "priority": 2,
+        "delay_sec": 234.0,
+        "finish_sec": 392.0,
+        "route_index": 1,
+        "layers": [
+          1,
+          1
+        ],
+        "lanes": [
+          0,
+          1
+        ],
+        "speed_mode": "nominal",
+        "structural_cost": 30.0,
+        "airborne_sec": 128.0
+      },
+      "after": {
+        "id": "F089",
+        "priority": 2,
+        "delay_sec": 232.0,
+        "finish_sec": 400.0,
+        "route_index": 1,
+        "layers": [
+          1,
+          1
+        ],
+        "lanes": [
+          0,
+          1
+        ],
+        "speed_mode": "metered",
+        "structural_cost": 33.0,
+        "airborne_sec": 138.0
+      },
+      "candidate": {
+        "template": 11,
+        "step": 116,
+        "mask": 3,
+        "delta": [
+          8.0,
+          10.0,
+          0.0,
+          0.0
+        ],
+        "delay_delta": -2.0,
+        "changes": [
+          false,
+          false,
+          false,
+          true
+        ]
+      },
+      "source": "results/single_merge/seed20003/ALL/events.jsonl.gz",
+      "source_sha256": "d785e4ff8ee0d11399e0a879c51da7e4be39bfb11712750b8c13ec2351b1be7c"
+    }
+  }
+}

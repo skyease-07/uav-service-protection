@@ -1,0 +1,50 @@
+# Result fields and manuscript mapping
+
+## Scenario metrics
+
+| Field | Meaning / unit |
+|---|---|
+| network, n, window_sec, seed | Network, requested flights, request-window seconds, random seed |
+| method, construction | Algorithm and initial construction rule; `composite` is the default |
+| complete | Whether every requested flight has a schedule |
+| weighted_delay_sec | Sum of priority-weight × ground delay, in weighted seconds per scenario |
+| total_delay_sec | Unweighted sum of ground-delay seconds per scenario |
+| runtime_sec | Original recorded total runtime, seconds; blank when not recorded as a total |
+| passes, stop_reason | Original reinsertion pass count and termination reason; blank where not applicable |
+| accepted_updates | Length of the original solver's update list; not necessarily a comparable operation across algorithms |
+| initial_signature, schedule_signature | Original signatures of the initial and final schedule |
+| reservation_conflicts, speed_passed | Archived resource conflict count and speed-audit outcome |
+| source_run, source_sha256 | Archive-relative input record and its SHA-256; not a URL |
+
+## Flight metrics
+
+`id` identifies a flight within a scenario; combine it with network, seed, method and construction to identify a row. Priority and vehicle type are separate categories. Evaluation weights are defined in each study's `final_protocol.json`.
+
+All `_sec` values are seconds; `_m` values are meters. `ground_delay_sec` is departure/entry delay, `finish_sec` is completion time in the scenario clock, `completion_from_request_sec` is time from request to completion, and `airborne_sec` is airborne duration. Horizontal and vertical distance are separate service proxies. `vertical_transitions` is a count.
+
+Delta fields compare the final plan with that method's shared SPC construction start; positive time/distance deltas mean an increase. Construction modes have different starts and must not be pooled. `route_changed`, `layer_changed`, `lane_changed`, `speed_changed` and `plan_changed` are change flags. Structural and selection costs are scoring terms, not observed money. Blank scenario fields mean unavailable/not applicable, not zero.
+
+## Statistical interpretation
+
+`analysis.json` preserves original field names. `n` denotes the number of scenarios in a statistical summary unless its surrounding key explicitly indicates flights/candidates. `mean`, `median`, `ci95`, `values`, and paired contrast arrays retain their original units. Main `primary` effects are percentage points of scenario-relative weighted-delay reduction. H1/H2 use t-based inference and multiplicity correction; follow-up intervals use scenario bootstrap. `ci95` is not an equivalence interval or a safety guarantee. Retained recovery uses the ratio of aggregate savings, not the average of per-scenario ratios. The original protocol files specify zero-denominator handling and units.
+
+Service violation masks use F=1 (completion), T=2 (airborne duration), H=4 (horizontal distance), V=8 (vertical distance). D protects H and V separately; ALL protects all four. Labels can overlap. Mechanism counts along common WSR states include repeated visits and are descriptive.
+
+## Paper-to-data mapping
+
+Stable labels below identify the Step29 English manuscript and supplement. Original table text is indexed in `results/paper_tables/index.csv`; supplementary/development fragments are distinguished by their content, not pooled with the held-out analysis.
+
+| Table/figure label or topic | Published evidence |
+|---|---|
+| `tab:confirmation`, `tab:confirmation-main`, `tab:confirmation-large`, `fig:confirmation` | `main/analysis.json`: primary and groups; `main/scenario_metrics.csv` |
+| `tab:confirmation-lns` | `main/analysis.json`: literature; first 30 merge seeds in main CSVs |
+| `tab:service`, service-detail/tails/strata/allowances, `fig:service` | `main/analysis.json`: service and service_subgroups; `main/service_flights.csv` |
+| `tab:construction-*`, `fig:construction-control` | `construction/analysis.json` and both construction CSVs |
+| `tab:service-split-*`, `fig:service-split-opportunities/recovery/masks` | `service/analysis.json`, both CSVs and mechanism JSONs |
+| Initial-blocking and accepted-update illustrations | `service/merge_initial_mechanism.json`, `accepted_update_changes.json`, `illustrative_witnesses.json`, `network_geometry_facts.json` |
+| Development `tab:main/primary/sensitivity/large`, `fig:main/large` | `development/final_analysis.json` |
+| Development LNS/protection tables | `development/lns_analysis.json`, `protected_lns_analysis.json` |
+| Capacity/geometry tables | `development/geometry_capacity_analysis.json`, `isolated_edge_capacity.json`, and audit JSONs |
+| Replay equivalence | `development/final_replay_equivalence.json`; graphical replay assets are outside this release |
+
+Conceptual workflow/network drawings and exact graphical reconstructions are not statistical data tables and are not regenerated by this release. Source table fragments are preserved as supplied; historical retained fragments may not be included by the current main TeX document.

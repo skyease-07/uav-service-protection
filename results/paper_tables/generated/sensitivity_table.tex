@@ -1,0 +1,16 @@
+\begin{table}[!htbp]
+\caption{Exploratory policy sensitivity on the first ten development merge seeds (100--109). Mild and strong pressure weights are 2/1.5/1 and 5/3/1; the base is 3/2/1. Cost variants scale only the 3/8/30 structural penalties. Every weighted outcome uses the fixed 3/2/1 evaluation metric. No variant is selected as a tuned replacement.}\label{tab:sensitivity}
+\centering\small
+\begin{tabularx}{\textwidth}{L R R R r}
+\toprule
+Variant & Weighted (s) & Total (s) & Runtime (s) & Cap \\
+\midrule
+Base (3/2/1) & 202,017 & 132,393 & 4.32 & 1 \\
+Unweighted (1/1/1) & 201,964 & 132,069 & 4.58 & 2 \\
+mild & 201,396 & 131,571 & 3.60 & 2 \\
+strong & 201,710 & 131,984 & 4.03 & 1 \\
+cost0.5 & 219,562 & 144,632 & 4.35 & 2 \\
+cost2 & 159,792 & 102,611 & 4.60 & 0 \\
+\bottomrule
+\end{tabularx}
+\end{table}

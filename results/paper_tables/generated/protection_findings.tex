@@ -1,0 +1,41 @@
+\begin{table}[!htbp]
+\centering\small
+\caption{Matched protection comparison on 30 development merge scenarios. Gain is the reduction in mean weighted delay relative to WSR; negative values favor WSR. I/T/W counts LNS improvements/ties/worse outcomes. Cap breaches count final flights exceeding their common SPC allocation. WSR timing is historical; LNS timing includes setup.}\label{tab:protected-main}
+\begin{tabular}{lrrrrr}
+\toprule
+Method & Weighted delay (s) & Gain (\%) & I/T/W & Cap breaches & Time (s)\\
+\midrule
+WSR & 204,789.4 & --- & --- & 0/3000 & 4.79\\
+LNS-U & 153,561.4 & 25.01 & 30/0/0 & 610/3000 & 10.54\\
+LNS-I & 200,923.9 & 1.89 & 15/0/15 & 0/3000 & 10.54\\
+LNS-M & 203,708.1 & 0.53 & 14/0/16 & 0/3000 & 10.55\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+With initial-allocation protection, LNS-I has 1.89\% lower mean weighted delay than WSR (15 improved, 0 tied, 15 worse seeds). With the same update-by-update ground-delay protection as WSR, LNS-M has 0.53\% lower mean weighted delay than WSR (14/0/16). Their mean total ground delays are 130,561.9 and 132,347.0 s, respectively, compared with 133,250.1 s for WSR. This comparison evaluates a protected method derived from the literature; it does not identify the best possible protected method.
+
+Both protected modes produce zero final SPC-cap violations across their respective 3000 development merge flights. LNS-I records 101 individual delay increases within accepted updates, all remaining below the initial bounds; LNS-M records 0. LNS-I accepts no improving group in 4/30 runs and LNS-M in 4/30. Randomized prioritized repair finds no improvement under these tight caps, but the runs do not establish that protected improvement is impossible.
+
+The separate unrestricted LNS-U run yields 153,561.4 s mean weighted delay, 25.01\% below WSR, with 610/3000 SPC-cap breaches. Its difference from the previous LNS-R value reflects wall-clock stopping and additional trace recording, not a change of the unrestricted search policy. A fixed-iteration regression confirms identity with the preserved implementation. Comparisons with LNS-U measure the effect of a bound within this repair family and finite budget, without estimating the globally optimal cost of protection.
+
+At the common completed-iteration prefix of all three modes in each development merge scenario (648--965 iterations, depending on seed), mean weighted delays are 153,561.4 s for LNS-U, 205,767.3 s for LNS-I and 206,460.3 s for LNS-M. This uses identical sampled-neighborhood prefixes and controls completed iteration count, while candidate feasibility and work per iteration remain different.
+
+The saved incumbent at each historical WSR completion time gives LNS-I: 207,186.2 versus 205,091.7 s across 26/30 available pairs; LNS-M: 208,002.1 versus 204,907.9 s across 27/30 available pairs. Cases without a completed LNS initialization at that time are excluded from these explicitly conditional means. This is a timing sensitivity check, not a synchronized hardware benchmark.
+
+\begin{table}[!htbp]
+\centering\small
+\caption{LNS-I extension under common SPC caps: ten seeds per network/request group. Gain and I/T/W are relative to WSR.}\label{tab:protected-large}
+\begin{tabular}{llrrrr}
+\toprule
+Network & Flights & WSR (s) & LNS-I (s) & Gain (\%) & I/T/W\\
+\midrule
+20-node & 100 & 46,673.6 & 46,686.4 & -0.03 & 2/1/7\\
+20-node & 200 & 213,324.0 & 214,484.6 & -0.54 & 0/1/9\\
+40-node & 100 & 16,013.8 & 15,015.8 & 6.23 & 10/0/0\\
+40-node & 200 & 91,502.6 & 91,190.8 & 0.34 & 7/1/2\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All 40 larger-network LNS-I allocations satisfy the initial individual bounds (0/6000 violations). Relative to WSR there are 19 improvements, 3 ties and 18 worse outcomes. This extension does not test LNS-M at larger scale. The retained unrestricted larger-network results in Table~\ref{tab:lns} were obtained in the earlier run series; the present protocol does not treat those timings as contemporaneous controls.

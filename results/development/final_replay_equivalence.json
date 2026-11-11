@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "equivalence": [
+    {
+      "seed": 24,
+      "schedule_equal": true,
+      "trajectory_rows": 46596,
+      "all_fields_equal": true,
+      "max_numeric_error": 0.0,
+      "csv_sha256": "956c5bb81fcf7dda8db363b361ebf6bd0992b75b086aa8435c24978a8b7be274",
+      "engine_log_sha256": "d01c19f9aa77544e9e6c6a7dd172cae2677a092fccfd31b86a98234ee265b755",
+      "engine_run": "Archived real NetLogo run; not re-executed in this revision"
+    },
+    {
+      "seed": 4,
+      "schedule_equal": true,
+      "trajectory_rows": 45844,
+      "all_fields_equal": true,
+      "max_numeric_error": 0.0,
+      "csv_sha256": "970c534f5dbbd75f0bfeff3ff66d71d8c1470cc659aaba8b948fe53f7bf00ff3",
+      "engine_log_sha256": "cede3fd03721f770d12a42d705692faee424c7942888efef0044b9b3ea1384cc",
+      "engine_run": "Archived real NetLogo run; not re-executed in this revision"
+    }
+  ],
+  "frames": [
+    {
+      "frame": "stage3_overview_t650",
+      "active": 7,
+      "priority_counts": {
+        "2": 7
+      },
+      "max_coordinate_error_m": 0.0
+    },
+    {
+      "frame": "stage3_detail_t47.5",
+      "active": 3,
+      "priority_counts": {
+        "2": 3
+      },
+      "max_coordinate_error_m": 0.0
+    },
+    {
+      "frame": "stage3_mixed_t1000",
+      "active": 7,
+      "priority_counts": {
+        "2": 3,
+        "5": 2,
+        "10": 2
+      },
+      "max_coordinate_error_m": 2.842170943040401e-14
+    }
+  ],
+  "figure_sha256": "eef81706d1bb93bd0cf015e553b1ab09237d459ccb2421625d0de365c5a6a143",
+  "model_sha256": "a87c6d48cd299bc000356eb912bf7ca99f7bb571edf4eba60a20ac8008d0390e"
+}

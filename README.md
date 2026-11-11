@@ -41,6 +41,10 @@ python scripts/run_example.py --study main --n 100 --seed 20000 --window 60 --in
 
 The alternative networks are `layered20` and `layered40`. See [reproduction scope](docs/REPRODUCTION.md) for the complete scenario ranges and evidence boundaries.
 
+## Published results and version
+
+[Release v1.0.0](https://github.com/skyease-07/uav-service-protection/releases/tag/v1.0.0) packages the code and complete summary results. Browse [results/](results/README.md) for all 1,980 scenario-method endpoints, 262,000 flight-metric rows, archived estimates and confidence intervals, audits, development summaries and manuscript table snapshots. Read [field definitions and paper mapping](docs/RESULTS_GUIDE.md), then run `python scripts/verify_results.py` to check the published data. The full raw event/replay archive is outside this release.
+
 ## Code map
 
 Original study folder names are retained to preserve protocol-relative imports. The scientific files are copied byte-for-byte; `provenance/source_sha256.json` records their hashes. `.gitattributes` disables line-ending conversion so these hashes remain valid after a Git clone on Windows or Linux.
@@ -63,7 +67,7 @@ The `frozen/` scheduler is a dependency of the unified model; use the release en
 
 SPC-UR and SPC-WSR use the same SPC start and candidate domain. Each accepted reinsertion protects current individual ground delay. F additionally protects completion time; T airborne time; D horizontal and vertical distance separately; ALL protects all four service metrics and corresponds to WSR-S. Construction and service-split follow-ups reuse previously inspected scenarios and are post-hoc analyses.
 
-This is a **core-code release**, not the full archived experimental dataset or a one-command regeneration of every manuscript figure/table. It does not include manuscript drafts, downloaded literature, NetLogo assets or full formal run logs. Resource and speed checks in the quick-start are not a continuous-time safety certificate. Service quantities are proxies, not calibrated energy or money.
+This is a **core-code and complete summary-results release**, with the precise data scope documented in `results/README.md`. It does not include the full raw research archive, manuscript drafts, downloaded literature, NetLogo assets or full formal event logs, and does not regenerate every manuscript figure. Resource and speed checks in the quick-start are not a continuous-time safety certificate. Service quantities are proxies, not calibrated energy or money.
 
 ## Attribution and reuse
 

@@ -25,6 +25,8 @@ python scripts/run_example.py --study service --output outputs/service
 
 UR/WSR 从相同 SPC 起点出发；重插入始终保护当前个体地面延误。F 保护完成时刻，T 保护空中时长，D 分别保护水平和垂直距离，ALL 联合保护四项，对应 WSR-S。构造对照及服务拆分使用已查看场景，属于事后分析。
 
-本次发布核心算法、必要依赖、配置、既有测试及小规模运行入口。完整正式结果档案、论文编辑稿、参考文献 PDF、NetLogo 回放资产未随本代码包发布；不能将本仓库描述为全部论文数据已公开。服务时间/距离指标不等同能耗或经济成本，示例审计不构成飞行安全认证。
+正式版本 [v1.0.0](https://github.com/skyease-07/uav-service-protection/releases/tag/v1.0.0) 发布核心算法及完整汇总结果：1,980 条逐场景方法指标、262,000 条逐航班指标、完整统计 JSON、审计结果、开发阶段汇总和论文表格快照。入口见 [results/](results/README.md)，字段及表图对应见 [RESULTS_GUIDE.md](docs/RESULTS_GUIDE.md)。运行 `python scripts/verify_results.py` 可验证数据。
+
+完整原始事件日志、全部方案轨迹及 NetLogo 回放资产未纳入本次发布，不能将本仓库描述为全部原始数据已公开。服务时间/距离指标不等同能耗或经济成本，示例审计不构成飞行安全认证。
 
 维护账号：`skyease-07`。作者尚未指定软件许可证，暂未代选 MIT/GPL 等授权。引用时请使用论文题目和实际代码提交号。

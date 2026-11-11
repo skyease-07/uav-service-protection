@@ -1,0 +1,26 @@
+\begin{table}[!htbp]
+\caption{Mean service changes from SPC (seconds for F and T, meters for L and Z), with counts of flights whose service worsens. Counts use 8000 merge flights or 4000 per larger network, overlap across measures, and are descriptive.}\label{tab:service-split-services}
+\centering\small
+\begin{tabularx}{\textwidth}{l l r r r r L}
+\toprule Network & Rule & $\Delta F$ & $\Delta T$ & $\Delta L$ & $\Delta Z$ & Worse F/T/L/Z\\\midrule
+Merge & SPC & 0.00 & 0.00 & 0.00 & 0.00 & 0/0/0/0\\
+Merge & WSR & -54.31 & -0.37 & 3.04 & -2.79 & 131/346/422/44\\
+Merge & F & -28.95 & -0.35 & 1.24 & -1.56 & 0/128/189/20\\
+Merge & T & -17.42 & -0.38 & 0.41 & -1.18 & 0/0/69/0\\
+Merge & D & 0.01 & 0.01 & 0.00 & 0.00 & 8/8/0/0\\
+Merge & ALL & 0.00 & 0.00 & 0.00 & 0.00 & 0/0/0/0\\
+20 nodes & SPC & 0.00 & 0.00 & 0.00 & 0.00 & 0/0/0/0\\
+20 nodes & WSR & -13.99 & -0.32 & 0.00 & -0.78 & 56/131/0/70\\
+20 nodes & F & -13.57 & -0.80 & 0.00 & -1.93 & 0/68/0/18\\
+20 nodes & T & -13.29 & -1.09 & 0.00 & -2.38 & 0/0/0/0\\
+20 nodes & D & -14.10 & -0.95 & 0.00 & -2.35 & 7/61/0/0\\
+20 nodes & ALL & -13.29 & -1.09 & 0.00 & -2.38 & 0/0/0/0\\
+40 nodes & SPC & 0.00 & 0.00 & 0.00 & 0.00 & 0/0/0/0\\
+40 nodes & WSR & -9.86 & -0.15 & 0.00 & -0.28 & 73/201/0/97\\
+40 nodes & F & -10.14 & -1.06 & 0.00 & -2.58 & 0/124/0/23\\
+40 nodes & T & -9.79 & -1.45 & 0.00 & -3.15 & 0/0/0/0\\
+40 nodes & D & -10.39 & -1.23 & 0.00 & -3.15 & 11/121/0/0\\
+40 nodes & ALL & -9.79 & -1.45 & 0.00 & -3.15 & 0/0/0/0\\
+\bottomrule
+\end{tabularx}
+\end{table}

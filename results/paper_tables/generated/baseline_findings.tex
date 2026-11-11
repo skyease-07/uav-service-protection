@@ -1,0 +1,31 @@
+\begin{table}[!htbp]
+\centering\small
+\caption{Literature LNS-R comparison from a common SPC start. Values are seed means; gain is the percentage reduction in mean weighted ground delay relative to WSR. I/T/W counts LNS-R improvements, ties and worse outcomes. All cases use the same candidate/resource domain; LNS-R allows individual delay increases.}\label{tab:lns}
+\begin{tabular}{llrrrrr}
+\toprule
+Network & Flights & Seeds & WSR (s) & LNS-R (s) & Gain (\%) & I/T/W\\
+\midrule
+20-node & 12 & 5 & 66.8 & 18.8 & 71.86 & 4/1/0\\
+20-node & 30 & 5 & 1,832.8 & 1,249.6 & 31.82 & 5/0/0\\
+Merge & 12 & 5 & 1,422.8 & 781.6 & 45.07 & 5/0/0\\
+Merge & 30 & 5 & 11,980.0 & 8,168.0 & 31.82 & 5/0/0\\
+Merge & 100 & 30 & 204,789.4 & 152,837.1 & 25.37 & 30/0/0\\
+20-node & 100 & 10 & 46,673.6 & 42,136.2 & 9.72 & 10/0/0\\
+20-node & 200 & 10 & 213,324.0 & 209,904.8 & 1.60 & 9/0/1\\
+40-node & 100 & 10 & 16,013.8 & 13,689.0 & 14.52 & 10/0/0\\
+40-node & 200 & 10 & 91,502.6 & 86,140.0 & 5.86 & 10/0/0\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+On the 30 development merge instances, LNS-R from SPC returns a mean weighted delay of 152,837.1 s versus 204,789.4 s for WSR, a reduction of 25.37\% (30 improved, 0 tied, 0 worse). Mean total ground delay is 95,827.5 versus 133,250.1 s. Mean total solver time is 10.52 versus 4.79 s, including the recorded setup costs. LNS-R therefore achieves substantially lower delay in this comparison.
+
+At each paired WSR completion time, the saved LNS-R incumbent has mean weighted delay 166,061.0 s across 27/30 cases with an available solution, 18.96\% below the corresponding WSR mean. In the remaining 3 cases, WSR finishes before LNS-R has completed setup; no LNS-R objective is assigned at that time. This conditional wall-clock comparison uses the recorded local environment and is not a machine-independent speed guarantee.
+
+The additional independent random-PP initialization gives mean weighted delay 150,752.1 s after LNS-R (30/0/0 relative to WSR), with mean total solver time 10.27 s. LNS-R thus obtains lower delay without being supplied WSR's final solution.
+
+Across the 40 larger-network cases, LNS-R improves 39, ties 0 and worsens 1 relative to WSR; its group-mean reductions range from 1.60\% to 14.52\%. The 10 s repair budget, synthetic route structure and finite neighborhood limit this comparison's generality.
+
+The aggregate gain involves a service trade-off: LNS-R from SPC increases the final ground delay of 604/3000 flights relative to the shared SPC allocation, and 680/3000 relative to WSR. WSR increases no flight's ground delay relative to SPC. The final allocations differ, but the comparison does not establish WSR as the best protected scheduler. Candidate preferences also differ, so the objective gap cannot be attributed solely to the protection constraint. Section~\ref{sec:protected-lns} therefore adds a direct comparison under matched bounds.
+
+The exact-solver diagnostics also found better solutions: in the five 12-flight merge cases, mean weighted delay is 1,422.8 s for WSR and 763.2 s for CP-SAT. For the five 12-flight 20-node cases, the corresponding values are 66.8 and 18.0 s; CP-SAT proves all five optima. For both 30-flight groups, CP-SAT retains the WSR objective within its budget. CBS-R improves none of its 20 incumbents. Focal-CBS-R improves one of 90 incumbents (98 s to zero in a 12-flight 20-node case); all 30 development merge and 40 larger-network cases retain their supplied WSR schedules. Those ties after time limits are not optimality certificates.
